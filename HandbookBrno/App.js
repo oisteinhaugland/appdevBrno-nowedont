@@ -1,13 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Header from './components/Header';
 
 export default function App() {
   return (
     <View>
-      <View></View>
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-      </View>
+      <Header/>
+      <Text>Differentt</Text>
     </View>
 
   );
@@ -20,11 +19,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  TitleStyle: {
-    flex: 1,
-    backgroundColor: 'blue',
-    alignItems: 'center',
-    padding:10,
-    paddingTop:40,
-  },
+
 });
