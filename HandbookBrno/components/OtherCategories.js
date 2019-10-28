@@ -2,6 +2,7 @@ import React from 'react'
 import {View, Text, StyleSheet} from 'react-native';
 
 const OtherCategories = () => {
+    /*Just a simple styled component no functionality here */
     return (
         <View>
             <Text style={styles.TextStyle}>Other Categories</Text>

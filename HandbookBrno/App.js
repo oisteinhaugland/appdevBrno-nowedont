@@ -1,24 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Header from './components/Header';
-import MainNavCard from './components/MainNavCard';
-import OtherCategories from './components/OtherCategories';
 
+import CourseNavigator from './navigation/CoursesNavigator';
+
+/*This is the basis component that gets rendered first*/
 export default function App() {
   return (
-    <View>
-      <Header/>
-      <MainNavCard Title="Survival Guide" Description="Something, Something, Something, Something,..."/>
-      <OtherCategories/>
-      <MainNavCard Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#87CEFA"/>
-      <MainNavCard Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#81D2C7"/>
-      <MainNavCard Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#E0E0E2"/>    
-      <MainNavCard Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#416788"/>    
-    </View>
+    /*CourseNavigator is the object that helps us navigate between screens,
+     check navigation/CoursesNavigator if you wanna see how routes are set up*/
+    <CourseNavigator/>
 
   );
 }
-
+/*We probably dont need this stylesheet now but its used to style components similar in a css way */
 const styles = StyleSheet.create({
   container: {
     flex: 1,
