@@ -1,6 +1,7 @@
 import React from 'react'
 import {View, Text, StyleSheet} from 'react-native'
 
+/*Initial header but probably we gonna have to deprecate this since its not gonna be used, since react navigation has its own header*/
 const Header = () => {
     return (
         <View style={styles2.TitleStyle}>
