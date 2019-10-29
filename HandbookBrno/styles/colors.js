@@ -1,0 +1,1 @@
+export const darkBlue = '#38B9D8'
