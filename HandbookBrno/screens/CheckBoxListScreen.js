@@ -20,9 +20,11 @@ export default class CheckBoxListScreen extends Component {
     render() {
         return (
             <View>
-                <CheckBoxCard Navigate={this.NavigateToGuide} Title="Survival Guide" Color="cyan"/>
-                <CheckBoxCard Navigate={this.NavigateToGuide} Title="Do tihs" Color="red"/>
-                <CheckBoxCard Navigate={this.NavigateToGuide} Title="Survival Guide Survival Guide" Color="cyan"/>
+                <CheckBoxCard Navigate={this.NavigateToGuide} Title="Survival Guide" Color="#ACDDDE"/>
+                <CheckBoxCard Navigate={this.NavigateToGuide} Title="Do this" Color="#ACDDDE"/>
+                <CheckBoxCard Navigate={this.NavigateToGuide} Title="Do that" Color="#ACDDDE"/>
+                <CheckBoxCard Navigate={this.NavigateToGuide} Title="Dio" Color="#ACDDDE"/>
+                <CheckBoxCard Navigate={this.NavigateToGuide} Title="Get crack" Color="#ACDDDE"/>
             </View>
         )
     }
