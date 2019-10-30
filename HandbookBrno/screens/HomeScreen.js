@@ -11,6 +11,10 @@ class HomeScreen extends React.Component {
     NavigateToGuide = () =>{
         this.props.navigation.navigate({routeName: 'GuideList'});
     }
+    /*Navigation to survival guide */
+    NavigateToCheckBox = () =>{
+        this.props.navigation.navigate({routeName: 'CheckBoxList'});
+    }
     /*This is the Header styles, since React-navigation create its own header we dont need a Header component anymore*/
     static navigationOptions = {
         title: 'Home',
@@ -27,7 +31,7 @@ class HomeScreen extends React.Component {
             <View>
                 {/*<Header/> commented out because react-navigation has its own header
                 Also the huge amount of MainNavCards its just for now just to see how it looks*/}
-                <MainNavCard Navigate={this.NavigateToGuide} Title="Survival Guide" Description="Something, Something, Something, Something,..."/>
+                <MainNavCard Navigate={this.NavigateToCheckBox} Title="Survival Guide" Description="Something, Something, Something, Something,..."/>
                 <OtherCategories/>
                 <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#87CEFA"/>
                 <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#81D2C7"/>
