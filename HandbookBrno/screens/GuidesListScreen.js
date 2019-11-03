@@ -9,7 +9,8 @@ const GuidesListScreen = (props) => {
                 props.navigation.navigate({
                     routeName:'GuideDetails',
                 })
-            }}></Button>
+            }}>
+            </Button>
         </View>
     )
 }
