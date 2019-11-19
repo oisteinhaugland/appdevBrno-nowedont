@@ -13,6 +13,7 @@ export default class CheckBoxListScreen extends Component {
           fontWeight: 'bold',
         },
     }
+    /*We specify the guideID to know which object from data.json load to the guidedetails under specific checkboxcard */
     NavigateToGuide = (guideID) =>{
         this.props.navigation.navigate('GuideDetails', { ID : guideID});
     }
