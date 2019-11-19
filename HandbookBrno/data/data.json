@@ -1,0 +1,14 @@
+{
+    "guides" : [
+        {"TramCard":{
+            "Title":"Tram Card Guide",
+            "Description":"To get your Public transport ticket you have two options: \\n  Physical transport pass \\n Electronic transport pass\\n We recommend getting the Electronic pass, all you need is a contactless bank card (it will be your ticket carrier) and a card with authorised online international payments to pay for the ticket. After your arrival in Brno, you only have to go to one of the DPMB shops once to verify your Brno ID account and then you can conveniently buy your monthly/quarterly tickets online."
+        }
+            
+        
+        },
+        {}
+    ],
+    "MD":"#Markdown in react-native is so cool! \n\n You can **emphasize** what you want, or just _suggest it_ 😏…\n",
+    "NewMarkDown":"###NEW ONE"
+}

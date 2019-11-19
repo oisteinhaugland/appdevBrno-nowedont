@@ -1,20 +1,31 @@
-import React from 'react'
-import {View, Text, StyleSheet} from 'react-native';
+import React, { Component } from 'react'
+import {View, ScrollView} from 'react-native';
+import Markdown from 'react-native-simple-markdown';
 
-const GuideDetailsScreen = () => {
+import * as data from '../data/data.json';
+
+export default class GuideDetailsScreen extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      Markdown: data[this.props.navigation.getParam('ID', 'NO-ID')],
+    }
+  }
+
+
+  render() {
     return (
-        <View style={styles.container}>
-            <Text>Guide Details</Text>
-        </View>
+      <View>
+      <ScrollView>
+        <Markdown>
+          {this.state.Markdown}
+          {console.log(this.state.Markdown)}
+          {console.log(this.props.navigation.getParam('ID', 'NO-ID'))}
+        </Markdown>
+      </ScrollView>
+      
+      </View>
     )
+  }
 }
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: 'white',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  
-  });
-export default GuideDetailsScreen

@@ -13,18 +13,18 @@ export default class CheckBoxListScreen extends Component {
           fontWeight: 'bold',
         },
     }
-    NavigateToGuide = () =>{
-        this.props.navigation.navigate({routeName: 'GuideDetails'});
+    NavigateToGuide = (guideID) =>{
+        this.props.navigation.navigate('GuideDetails', { ID : guideID});
     }
 
     render() {
         return (
             <View>
-                <CheckBoxCard Navigate={this.NavigateToGuide} Title="Survival Guide" Color="#ACDDDE"/>
-                <CheckBoxCard Navigate={this.NavigateToGuide} Title="Do this" Color="#ACDDDE"/>
-                <CheckBoxCard Navigate={this.NavigateToGuide} Title="Do that" Color="#ACDDDE"/>
-                <CheckBoxCard Navigate={this.NavigateToGuide} Title="Dio" Color="#ACDDDE"/>
-                <CheckBoxCard Navigate={this.NavigateToGuide} Title="Get crack" Color="#ACDDDE"/>
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="MD" Title="Get your Tram card" Color="#ACDDDE"/>
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="NewMarkDown" Title="NewMarkdownnewnew" Color="#ACDDDE"/>
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Do that" Color="#ACDDDE"/>
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Dio" Color="#ACDDDE"/>
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Get crack" Color="#ACDDDE"/>
             </View>
         )
     }
