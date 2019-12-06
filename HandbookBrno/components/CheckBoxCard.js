@@ -29,7 +29,7 @@ const CheckBoxCard = ({Title, Color, Navigate, GuideID, Description}) => {
                     </Text>
                   </View>
                   
-                  
+                
                   <Todo_Button text="Mark as complete"></Todo_Button>
                   
               </View>

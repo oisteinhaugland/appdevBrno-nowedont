@@ -43,15 +43,12 @@ class HomeScreen extends React.Component {
                 {/*<Header/> commented out because react-navigation has its own header
                 Also the huge amount of MainNavCards its just for now just to see how it looks
                 <OtherCategories/>*/}
-                <MainNavCard Navigate={this.NavigateToCheckBox} Title="Survival Guide" Description="Something, Something, Something, Something,..."/>
-            
-                
+                <MainNavCard Navigate={this.NavigateToCheckBox} Title="Start Here - Essential To Do List" Description="Important things to remember to do upon arrival"/>  
 
-                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." />
+                <MainNavCard Navigate={this.NavigateToGuide} Title="Public Transport" Description="How to get tram / buss cards" />
 
-                
 
-                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." />
+                <MainNavCard Navigate={this.NavigateToGuide} Title="Waste Fee" Description="Required if you stay more than 3 months" />
 
                 
 
