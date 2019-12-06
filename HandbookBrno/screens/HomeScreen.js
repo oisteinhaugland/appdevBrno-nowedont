@@ -45,23 +45,24 @@ class HomeScreen extends React.Component {
                 <OtherCategories/>*/}
                 <MainNavCard Navigate={this.NavigateToCheckBox} Title="Survival Guide" Description="Something, Something, Something, Something,..."/>
             
-                <Horizontal_spacer></Horizontal_spacer>
+                
 
                 <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." />
 
-                <Horizontal_spacer></Horizontal_spacer>
+                
 
                 <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." />
 
-                <Horizontal_spacer></Horizontal_spacer>
+                
 
                 <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." />    
 
-                <Horizontal_spacer></Horizontal_spacer>
+                
 
                 <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." />    
 
-                <Horizontal_spacer></Horizontal_spacer>
+                
+                
             </View>
         );
     }

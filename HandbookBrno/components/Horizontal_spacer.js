@@ -14,9 +14,25 @@ const Horizontal_spacer = () => {
 const styles = StyleSheet.create({
     spacer_style: {
       height:.6,
-      backgroundColor:"rgba(0,0,0,0.5)",      
-      marginVertical:10,
-      marginHorizontal:10
+      backgroundColor:"rgba(0,0,0,0.3)",      
+      marginVertical:15,
+      marginHorizontal:15,
+
+
+
+      shadowColor: "#000",
+      shadowOffset: {
+	  width: 0,
+	  height: 2,
+},
+  shadowOpacity: 0.25,
+  shadowRadius: 3.84,
+
+  elevation: 5,
+
+
+
+      
   }});
 
 export default Horizontal_spacer

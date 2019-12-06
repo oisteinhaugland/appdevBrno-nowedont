@@ -20,7 +20,7 @@ const MainNavCard = ({Title, Description, Color, Navigate}) => {
     return (
         <TouchableHighlight underlayColor="white" activeOpacity={0.5} onPress={Navigate}>
             <View style={NavColor(Color)}>
-                 <Text style={styles.Title}>{Title}</Text>
+                <Text style={styles.Title}>{Title}</Text>
                 <Text>{Description}</Text>
             </View>
         </TouchableHighlight>
@@ -29,12 +29,23 @@ const MainNavCard = ({Title, Description, Color, Navigate}) => {
 const styles = StyleSheet.create({
     NavCardStyle: {
       borderRadius: 0,
-      padding:20,
+      paddingHorizontal:20,
+      paddingVertical:25,
       marginLeft:0,
       marginRight:0,
-      marginTop:5,
-      marginBottom: 5,
+      marginTop:0,
+      marginBottom: 10,
       backgroundColor:"#fefefe",
+
+      shadowColor: "#000",
+      shadowOffset: {
+	  width: 0,
+	  height: 2,
+},
+  shadowOpacity: 0.25,
+  shadowRadius: 3.84,
+
+  elevation: 5,
      
     //shadowColor: "#000",
      // shadowOffset: {

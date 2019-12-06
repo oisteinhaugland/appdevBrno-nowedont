@@ -23,21 +23,29 @@ export default class CheckBoxListScreen extends Component {
         return (
             <View>
                 
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="MD" Title="Get your Tram card" />
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Learning Agreement" Description="Get learning agreement signed at your faculty" />
 
-                <Horizontal_spacer></Horizontal_spacer>
-
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="NewMarkDown" Title="NewMarkdownnewnew" />
                 
-                <Horizontal_spacer></Horizontal_spacer>
+
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Accomodation office" Description="Get documents signed" />
+
                 
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Do that" />
 
-                <Horizontal_spacer></Horizontal_spacer>
+                <CheckBoxCard Navigate={this.NavigateToGuide}      GuideID="MD" 
+                Title="Public transport" 
+                Description ="Aquire a tram/buss card"
+                />
 
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Dio" />
+                
 
-                <Horizontal_spacer></Horizontal_spacer>
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Waste Tax" Description="Pay Waste tax before deadline" />
+                
+                
+              
+
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Czech Bank-account" Description="Open czech account to receive scholarship (Free money)"/>
+
+                
 
                 <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Get crack"/>
             </View>
