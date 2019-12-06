@@ -4,11 +4,11 @@ import CheckBoxCard from '../components/CheckBoxCard';
 
 export default class CheckBoxListScreen extends Component {
     static navigationOptions = {
-        title: 'Checkbox',
+        title: 'Home --------> Checkbox',
         headerStyle: {
-          backgroundColor: '#808080',
+         // backgroundColor: '#808080',
         },
-        headerTintColor: '#fff',
+        headerTintColor: '#333',
         headerTitleStyle: {
           fontWeight: 'bold',
         },

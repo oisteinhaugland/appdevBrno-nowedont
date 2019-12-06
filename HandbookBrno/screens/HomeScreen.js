@@ -19,9 +19,9 @@ class HomeScreen extends React.Component {
     static navigationOptions = {
         title: 'Home',
         headerStyle: {
-          backgroundColor: '#808080',
+         // backgroundColor: '#808080',
         },
-        headerTintColor: '#fff',
+        headerTintColor: '#333',
         headerTitleStyle: {
           fontWeight: 'bold',
         },

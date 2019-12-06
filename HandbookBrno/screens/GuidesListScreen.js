@@ -8,6 +8,7 @@ const GuidesListScreen = (props) => {
             <Button title="Go to Details" onPress={()=>{
                 props.navigation.navigate({
                     routeName:'GuideDetails',
+                    
                 })
             }}>
             </Button>
