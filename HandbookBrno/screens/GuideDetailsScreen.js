@@ -20,8 +20,8 @@ export default class GuideDetailsScreen extends Component {
       <ScrollView>
         <Markdown>
           {this.state.Markdown}
-          {console.log(this.state.Markdown)}
-          {console.log(this.props.navigation.getParam('ID', 'NO-ID'))}
+          {/*console.log(this.state.Markdown)*/}
+          {/*console.log(this.props.navigation.getParam('ID', 'NO-ID'))*/}
         </Markdown>
       </ScrollView>
       
