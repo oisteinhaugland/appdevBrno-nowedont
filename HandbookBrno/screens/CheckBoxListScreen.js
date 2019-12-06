@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import {View} from 'react-native'
 import CheckBoxCard from '../components/CheckBoxCard';
+import Horizontal_spacer from '../components/Horizontal_spacer';
 
 export default class CheckBoxListScreen extends Component {
     static navigationOptions = {
-        title: 'Home --------> Checkbox',
+        /*title: 'Home --------> Checkbox',*/
         headerStyle: {
          // backgroundColor: '#808080',
         },
@@ -21,11 +22,24 @@ export default class CheckBoxListScreen extends Component {
     render() {
         return (
             <View>
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="MD" Title="Get your Tram card" Color="#ACDDDE"/>
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="NewMarkDown" Title="NewMarkdownnewnew" Color="#ACDDDE"/>
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Do that" Color="#ACDDDE"/>
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Dio" Color="#ACDDDE"/>
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Get crack" Color="#ACDDDE"/>
+                
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="MD" Title="Get your Tram card" />
+
+                <Horizontal_spacer></Horizontal_spacer>
+
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="NewMarkDown" Title="NewMarkdownnewnew" />
+                
+                <Horizontal_spacer></Horizontal_spacer>
+                
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Do that" />
+
+                <Horizontal_spacer></Horizontal_spacer>
+
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Dio" />
+
+                <Horizontal_spacer></Horizontal_spacer>
+
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Get crack"/>
             </View>
         )
     }

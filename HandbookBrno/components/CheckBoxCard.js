@@ -1,5 +1,6 @@
 import React from 'react'
 import {View, Text, StyleSheet, TouchableHighlight, CheckBox, Button} from 'react-native';
+import Todo_Button from '../components/todo_button';
 
 const CheckBoxCard = ({Title, Color, Navigate, GuideID}) => {
     /*Just return the style for the NavCard with a specified Color in props
@@ -17,13 +18,16 @@ const CheckBoxCard = ({Title, Color, Navigate, GuideID}) => {
     /*Checkbox needs to store its value in the state of this component, and load the state from a data source(prob a json file)
     Also the Text arrow should probably be replaced with an icon but i didnt have time for that*/
     return (
-        
+        /**/ 
             <View style={NavColor(Color)}>
-                <CheckBox style={{flex:1,}} value={false /*This is where we get the vale of the checkbox */} onValueChange={() => {/* This is where the logic for saving the state of checkbox should be */}}/>
+                
                 <Text style={styles.Title}>{Title}</Text>
+                
+                <Todo_Button></Todo_Button>
+
                 <TouchableHighlight onPress={() =>{Navigate(GuideID)}} style={styles.Arrow}>
-                    <Text style={{fontSize:23,fontWeight:'bold',}}>
-                        ->
+                    <Text style={{fontSize:23}}>
+                    
                     </Text>
                 </TouchableHighlight>
                 
@@ -33,12 +37,13 @@ const CheckBoxCard = ({Title, Color, Navigate, GuideID}) => {
 }
 const styles = StyleSheet.create({
     NavCardStyle: {
-      borderRadius: 10,
-      padding:12,
-      marginLeft:10,
-      marginRight:10,
-      marginTop:10,
-      backgroundColor:"red",
+      borderRadius: 0,
+      padding:20,
+      marginLeft:0,
+      marginRight:0,
+      marginTop:5,
+      marginBottom: 5,
+      backgroundColor:"#fefefe",
       flexDirection:"row",
      
     //shadowColor: "#000",
@@ -53,7 +58,7 @@ const styles = StyleSheet.create({
     },
     Title:{
         fontSize:23,
-        fontWeight:'bold',
+        fontWeight:'normal',
         marginBottom: 2,
         flex:5,
     },

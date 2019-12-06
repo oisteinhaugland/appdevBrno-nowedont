@@ -4,6 +4,8 @@ import Header from '../components/Header';
 import * as Font from 'expo-font';
 import MainNavCard from '../components/MainNavCard';
 import OtherCategories from '../components/OtherCategories';
+import {StyleSheet} from 'react-native';
+import Horizontal_spacer from '../components/Horizontal_spacer';
 
 class HomeScreen extends React.Component {
 
@@ -37,20 +39,41 @@ class HomeScreen extends React.Component {
     }
     render(){
         return (
-            <View style={{}}>
+            <View style={styles.container}>
                 {/*<Header/> commented out because react-navigation has its own header
                 Also the huge amount of MainNavCards its just for now just to see how it looks
                 <OtherCategories/>*/}
                 <MainNavCard Navigate={this.NavigateToCheckBox} Title="Survival Guide" Description="Something, Something, Something, Something,..."/>
-                
+            
+                <Horizontal_spacer></Horizontal_spacer>
+
                 <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." />
+
+                <Horizontal_spacer></Horizontal_spacer>
+
                 <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." />
+
+                <Horizontal_spacer></Horizontal_spacer>
+
                 <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." />    
+
+                <Horizontal_spacer></Horizontal_spacer>
+
                 <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." />    
+
+                <Horizontal_spacer></Horizontal_spacer>
             </View>
         );
     }
 
 }
+
+const styles = StyleSheet.create({
+  container: {
+      backgroundColor: '#fefefe',
+      flex:1
+  },
+
+});
 
 export default HomeScreen
