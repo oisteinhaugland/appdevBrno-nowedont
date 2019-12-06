@@ -7,6 +7,8 @@ import OtherCategories from '../components/OtherCategories';
 import {StyleSheet} from 'react-native';
 import Horizontal_spacer from '../components/Horizontal_spacer';
 
+
+
 class HomeScreen extends React.Component {
 
     /*Load the font */
