@@ -28,11 +28,11 @@ const MainNavCard = ({Title, Description, Color, Navigate}) => {
 }
 const styles = StyleSheet.create({
     NavCardStyle: {
-      borderRadius: 10,
-      padding:12,
-      marginLeft:10,
-      marginRight:10,
-      marginTop:10,
+      borderRadius: 0,
+      padding:20,
+      marginLeft:0,
+      marginRight:0,
+      marginTop:0,
       backgroundColor:"red",
      
     //shadowColor: "#000",
