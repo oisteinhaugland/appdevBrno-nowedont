@@ -39,13 +39,14 @@ class HomeScreen extends React.Component {
         return (
             <View style={{}}>
                 {/*<Header/> commented out because react-navigation has its own header
-                Also the huge amount of MainNavCards its just for now just to see how it looks*/}
+                Also the huge amount of MainNavCards its just for now just to see how it looks
+                <OtherCategories/>*/}
                 <MainNavCard Navigate={this.NavigateToCheckBox} Title="Survival Guide" Description="Something, Something, Something, Something,..."/>
-                <OtherCategories/>
-                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#87CEFA"/>
-                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#81D2C7"/>
-                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#E0E0E2"/>    
-                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#416788"/>    
+                
+                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." />
+                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." />
+                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." />    
+                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." />    
             </View>
         );
     }
