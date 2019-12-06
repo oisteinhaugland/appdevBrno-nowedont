@@ -13,7 +13,11 @@ export default class App extends Component{
       await Font.loadAsync({
           //font1 or 2 can be any name. This'll be used in font-family
            
-          palatino: require('./assets/fonts/palatino/palatino.ttf'),//Path to fonts
+          palatino: require('./assets/fonts/palatino/palatino.ttf'),
+          fabrands: require('./assets/fonts/font_awesome/fa-brands-400.ttf'),
+          faregular: require('./assets/fonts/font_awesome/fa-regular-400.ttf'),
+          fasolid: require('./assets/fonts/font_awesome/fa-solid-900.ttf'),
+          //Path to fonts
       });
       this.setState({fontsLoaded: true});
   }

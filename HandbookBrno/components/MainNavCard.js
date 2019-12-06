@@ -3,7 +3,9 @@ import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
 import CustomText from '../components/CustomText';
 import FontAwesome, { SolidIcons, RegularIcons, BrandIcons } from 'react-native-fontawesome';
 
-const MainNavCard = ({Title, Description, Color, Navigate}) => {
+import { Ionicons } from '@expo/vector-icons';
+
+const MainNavCard = ({Title, Description, Color, Navigate,iconName,iconColor="#333"}) => {
     /*Just return the style for the NavCard with a specified Color in props
     no need to get into this, just know that its used to style the cards color */
     const NavColor = (color) =>{
@@ -29,7 +31,7 @@ const MainNavCard = ({Title, Description, Color, Navigate}) => {
                 </View>
                 
                 <View style={styles.fa_icon_container}>
-                  
+                <Ionicons name={iconName} size={40} color={iconColor} />
                 </View>
             </View>
         </TouchableHighlight>
@@ -75,15 +77,18 @@ const styles = StyleSheet.create({
 
 
     flex_spacing:{
-      flex:8
+      flex:9
       
   },
 
 
     fa_icon_container:{
+
       fontWeight:'normal',
-      flex:2,
-      alignSelf:'center'
+      flex:1,
+      alignSelf:'center',
+      alignItems:'center'
+    
   },
   });
 
