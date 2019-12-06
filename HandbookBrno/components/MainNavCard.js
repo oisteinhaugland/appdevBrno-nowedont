@@ -1,7 +1,6 @@
 import React from 'react'
 import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
 import CustomText from '../components/CustomText';
-import FontAwesome, { SolidIcons, RegularIcons, BrandIcons } from 'react-native-fontawesome';
 
 const MainNavCard = ({Title, Description, Color, Navigate}) => {
     /*Just return the style for the NavCard with a specified Color in props

@@ -6,10 +6,7 @@ const GuidesListScreen = (props) => {
         <View style={styles.container}>
             <Text>Guide List</Text>
             <Button title="Go to Details" onPress={()=>{
-                props.navigation.navigate({
-                    routeName:'GuideDetails',
-                    
-                })
+                this.props.navigation.navigate('GuideDetails', { ID : guideID});
             }}>
             </Button>
         </View>
