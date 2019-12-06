@@ -7,12 +7,6 @@ import OtherCategories from '../components/OtherCategories';
 
 class HomeScreen extends React.Component {
 
-    /*Load the font */
-    componentDidMount() {
-        Font.loadAsync({
-          //'palatino': require('../assets/fonts/palatino/palatino.tff'),
-        });
-      }
     /*This is how we navigate to other components, if you're unsure what is routeName check navigation/CoursesNavigation.js
     Also props.navigation methods are only passed down to components specified in Navigator file so if you want to use them in
     sub components you have to do it like i did it here with passing down a function, not sure if there is another way */
@@ -37,7 +31,7 @@ class HomeScreen extends React.Component {
     }
     render(){
         return (
-            <View style={{}}>
+            <View>
                 {/*<Header/> commented out because react-navigation has its own header
                 Also the huge amount of MainNavCards its just for now just to see how it looks
                 <OtherCategories/>*/}

@@ -1,5 +1,6 @@
 import React from 'react'
 import {View, Text, StyleSheet, TouchableHighlight, CheckBox, Button} from 'react-native';
+import CustomText from '../components/CustomText';
 
 const CheckBoxCard = ({Title, Color, Navigate, GuideID}) => {
     /*Just return the style for the NavCard with a specified Color in props
@@ -20,11 +21,11 @@ const CheckBoxCard = ({Title, Color, Navigate, GuideID}) => {
         
             <View style={NavColor(Color)}>
                 <CheckBox style={{flex:1,}} value={false /*This is where we get the vale of the checkbox */} onValueChange={() => {/* This is where the logic for saving the state of checkbox should be */}}/>
-                <Text style={styles.Title}>{Title}</Text>
+                <CustomText style={styles.Title}>{Title}</CustomText>
                 <TouchableHighlight onPress={() =>{Navigate(GuideID)}} style={styles.Arrow}>
-                    <Text style={{fontSize:23,fontWeight:'bold',}}>
+                    <CustomText style={{fontSize:23,fontWeight:'bold',}}>
                         ->
-                    </Text>
+                    </CustomText>
                 </TouchableHighlight>
                 
             </View>
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
     },
     Title:{
         fontSize:23,
-        fontWeight:'bold',
+        //fontWeight:'bold',
         marginBottom: 2,
         flex:5,
     },

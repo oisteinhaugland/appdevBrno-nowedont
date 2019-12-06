@@ -1,5 +1,6 @@
 import React from 'react'
 import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
+import CustomText from '../components/CustomText';
 
 const MainNavCard = ({Title, Description, Color, Navigate}) => {
     /*Just return the style for the NavCard with a specified Color in props
@@ -20,8 +21,8 @@ const MainNavCard = ({Title, Description, Color, Navigate}) => {
     return (
         <TouchableHighlight underlayColor="white" activeOpacity={0.5} onPress={Navigate}>
             <View style={NavColor(Color)}>
-                 <Text style={styles.Title}>{Title}</Text>
-                <Text>{Description}</Text>
+                 <CustomText style={styles.Title}>{Title}</CustomText>
+                <CustomText>{Description}</CustomText>
             </View>
         </TouchableHighlight>
     )
