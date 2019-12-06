@@ -1,8 +1,9 @@
 import React from 'react'
 import {View, Text, StyleSheet, TouchableHighlight, CheckBox, Button} from 'react-native';
 import CustomText from '../components/CustomText';
+import Todo_Button from '../components/todo_button';
 
-const CheckBoxCard = ({Title, Color, Navigate, GuideID}) => {
+const CheckBoxCard = ({Title, Color, Navigate, GuideID, Description}) => {
     /*Just return the style for the NavCard with a specified Color in props
     no need to get into this, just know that its used to style the cards color */
     const NavColor = (color) =>{
@@ -18,51 +19,65 @@ const CheckBoxCard = ({Title, Color, Navigate, GuideID}) => {
     /*Checkbox needs to store its value in the state of this component, and load the state from a data source(prob a json file)
     Also the Text arrow should probably be replaced with an icon but i didnt have time for that*/
     return (
-        
-            <View style={NavColor(Color)}>
-                <CheckBox style={{flex:1,}} value={false /*This is where we get the vale of the checkbox */} onValueChange={() => {/* This is where the logic for saving the state of checkbox should be */}}/>
-                <CustomText style={styles.Title}>{Title}</CustomText>
-                <TouchableHighlight onPress={() =>{Navigate(GuideID)}} style={styles.Arrow}>
-                    <CustomText style={{fontSize:23,fontWeight:'bold',}}>
-                        ->
-                    </CustomText>
-                </TouchableHighlight>
+        /**/ 
+            
+              <View style={NavColor(Color)}>
+                  
+                  <View style={styles.Description}>
+                    <Text style={styles.Title}>{Title}</Text>
+                    <Text>
+                      {Description}
+                    </Text>
+                  </View>
+                  
                 
-            </View>
+                  <Todo_Button text="Mark as complete"></Todo_Button>
+                  
+              </View>
+            
        
     )
 }
 const styles = StyleSheet.create({
     NavCardStyle: {
-      borderRadius: 10,
-      padding:12,
-      marginLeft:10,
-      marginRight:10,
-      marginTop:10,
-      backgroundColor:"red",
+      borderRadius: 0,
+      padding:20,
+      marginLeft:0,
+      marginRight:0,
+      marginTop:0,
+      marginBottom: 10,
+      backgroundColor:"#fefefe",
       flexDirection:"row",
-     
-    //shadowColor: "#000",
-     // shadowOffset: {
-         // width: 0,
-      //    height: 2,
-     // },
-      //shadowOpacity: 0.25,
-      //shadowRadius: 3.84,
-      
-      //elevation: 5,
+
+      shadowColor: "#000",
+      shadowOffset: {
+	  width: 0,
+	  height: 2,
+},
+  shadowOpacity: 0.25,
+  shadowRadius: 3.84,
+
+  elevation: 5,
+
+
+
     },
+
+    Description:{
+      fontSize:15,
+      fontWeight:'normal',
+      marginBottom: 2,
+      flex:6,
+      flexDirection:"column",
+      padding:5
+  },
+
     Title:{
         fontSize:23,
-        //fontWeight:'bold',
+        fontWeight:'normal',
         marginBottom: 2,
-        flex:5,
     },
-    Arrow:{
-        flex:1,
-        justifyContent:"center",
-         alignItems:"center"
-    }
+
   });
 
 export default CheckBoxCard

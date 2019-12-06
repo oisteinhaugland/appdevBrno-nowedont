@@ -1,6 +1,7 @@
 import React from 'react'
 import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
 import CustomText from '../components/CustomText';
+import FontAwesome, { SolidIcons, RegularIcons, BrandIcons } from 'react-native-fontawesome';
 
 const MainNavCard = ({Title, Description, Color, Navigate}) => {
     /*Just return the style for the NavCard with a specified Color in props
@@ -21,25 +22,40 @@ const MainNavCard = ({Title, Description, Color, Navigate}) => {
     return (
         <TouchableHighlight underlayColor="white" activeOpacity={0.5} onPress={Navigate}>
             <View style={NavColor(Color)}>
-                 <CustomText style={styles.Title}>{Title}</CustomText>
-                <CustomText>{Description}</CustomText>
+                
+                <View style={styles.flex_spacing}>
+                  <Text style={styles.Title}>{Title}</Text>
+                  <Text>{Description}</Text>
+                </View>
+                
+                <View style={styles.fa_icon_container}>
+                  
+                </View>
             </View>
         </TouchableHighlight>
     )
 }
 const styles = StyleSheet.create({
     NavCardStyle: {
+      flexDirection:"row",
       borderRadius: 0,
-      padding:20,
+      paddingHorizontal:20,
+      paddingVertical:25,
       marginLeft:0,
       marginRight:0,
-      marginTop:5,
-      marginBottom: 5,
-      borderTopColor:"rgba(30,30,30,1)",
-      borderBottomColor:"rgba(30,30,30,1)",
-      borderTopWidth:0.5,
-      borderBottomWidth:0.5,
-      backgroundColor:"#f7f7f7",
+      marginTop:0,
+      marginBottom: 10,
+      backgroundColor:"#fefefe",
+
+
+      shadowColor: "#000",
+      shadowOffset: {
+	    width: 0,
+	    height: 2,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+      elevation: 5,
      
     //shadowColor: "#000",
      // shadowOffset: {
@@ -53,9 +69,22 @@ const styles = StyleSheet.create({
     },
     Title:{
         fontSize:23,
-        fontWeight:'bold',
+        fontWeight:'normal',
         marginBottom: 2,
     },
+
+
+    flex_spacing:{
+      flex:8
+      
+  },
+
+
+    fa_icon_container:{
+      fontWeight:'normal',
+      flex:2,
+      alignSelf:'center'
+  },
   });
 
 export default MainNavCard
