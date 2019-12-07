@@ -1,15 +1,15 @@
 {
     "guides" :
         {"TramCard":{
-            "Title":"Tram Card Guide",
+            "Title":"Public transport",
             "ContentArray":[
                 {
-                    "header":"header1",
-                    "body":"bodyText1"
+                    "header":"Long term tickets",
+                    "body":"If you are a student under 26, you are entitled to a reduced student-rate pass for two zones (100 and 101) which is the most practical. To get your Public transport ticket you have two options: \n\n•	Physical transport pass \n\n•	Electronic transport pass\n\nWe recommend getting the Electronic pass, all you need is a contactless bank card (it will be your ticket carrier) and a card with authorised online international payments to pay for the ticket. After your arrival in Brno, you only have to go to one of the DPMB shops once to verify your Brno ID account and then you can conveniently buy your monthly/quarterly tickets online. You can find the detailed guide here(link to pdf).\n\nIf you decide to get a physical version you need ISIC/STUDENT CARD, ID/Passport, photo(25x25), money. You will take all of these things and go to the Public Transport office (Novobranská 693/18, 602 00 Brno-střed) and get your Tram Ticket (Šalinkartu) there!\n\n"
                 },
                 {
-                    "header":"header2",
-                    "body":"bodyText2" 
+                    "header":"Single use tickets",
+                    "body":"For occasional travel around Brno, you can buy a single-use ticket. Its validity is time and zone limited (zones 100 and 101 will suffice). Tickets are sold through yellow vending machines at some stops, DPMB shops, kiosks and railway stations. You can also buy a ticket for a higher price in the bus or tram, just ask the driver and be sure to have the exact amount of money. The ticket is valid from the moment it has been validated for the period specified on it and only in those tariff zones marked on the ticket. Aside from special tickets valid outside of zones 100 and 101, you can change vehicles with all kinds of tickets within the time limit. The ticket does not have to be validated again during transfers.\n\nYou can also buy an SMS ticket by sending a text to number 90206, but it is only possible with a Czech SIM card (make sure the “Premium SMS” service is activated with your mobile provider). You have to wait for the confirmation SMS (approximately 2 minutes) before you board the vehicle.\n\n•	“BRNO20” 20 minutes ticket for 20 CZK\n\n•	“BRNO” 75 minutes ticket for 29 CZK\n\n•	“BRNOD” 24 hours ticket for 99 CZK\n\nAnother option is to use DPMB app and buy it through it.\n\n" 
                 }
             ]
             },

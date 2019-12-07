@@ -4,7 +4,17 @@ import {View, ScrollView, Text, FlatList, StyleSheet} from 'react-native';
 import * as data from '../data/data.json';
 
 export default class GuideDetailsScreen extends Component {
-
+  static navigationOptions = {
+    title: "this.state.GuideData.Title",
+    headerStyle: {
+     // backgroundColor: '#808080',
+     // fontfamily:palatino,
+    },
+    headerTintColor: '#333',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
+}
   
   constructor(props) {
     super(props)
@@ -12,6 +22,9 @@ export default class GuideDetailsScreen extends Component {
       GuideData: data["guides"][this.props.navigation.getParam('ID', 'NO-ID')],
     }
    // console.log(data["guides"][this.props.navigation.getParam('ID', 'NO-ID')]);
+  }
+  componentDidMount(){
+    
   }
   renderParagraph = ({header, body}) =>{
     return (
@@ -46,15 +59,17 @@ const styles = StyleSheet.create({
     fontSize:40,
   },
   BodyBlock:{
-    padding:5,
+    padding:15,
     marginLeft:5,
   },
   Header:{
     fontSize:30,
+    marginBottom:5,
     
   },
   BodyText:{
-    fontSize:15,
+    fontSize:20,
+    lineHeight:40,
   }
 
 });
