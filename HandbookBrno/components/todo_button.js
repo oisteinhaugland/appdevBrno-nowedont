@@ -1,19 +1,36 @@
 import React from 'react'
 import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
+import {
+  // previously imported modules
+  Animated, // provides methods for animating components
+  Easing // for implementing easing functions
+} from "react-native";
 
-const Todo_button = ({text}) => {
- 
+
+class Todo_button extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.text= props.text
+  }
+  
+render(){
     return (
             
-              <TouchableHighlight onPress={() =>{}} style={styles.button_style}>
-                  
+              <TouchableHighlight
+                style={styles.button_style}
+                underlayColor="#f39c12"
+                onPress={() => {}} 
+              >
+
                     <Text>
-                      {text}
+                      {this.text}
                     </Text>
                     
                 </TouchableHighlight>
           
     )
+  }
 }
 
 
@@ -38,14 +55,27 @@ const styles = StyleSheet.create({
       flex:3,
       shadowColor: "#000",
       shadowOffset: {
-	  width: 0,
-	  height: 2,
-},
-  shadowOpacity: 0.25,
-  shadowRadius: 3.84,
+	    width: 0,
+	    height: 2,
+    },
+    shadowOpacity: 1.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
 
-  elevation: 5,
-  }});
+  button_style_pressed:{
+    shadowColor: "#000",
+    shadowOffset: {
+    width: 0,
+    height: 2,
+  },
+    elevation: 1,
+    shadowOpacity: 0,
+    shadowRadius: 0,
+  }
+  
+
+});
 
 export default Todo_button
 

@@ -30,7 +30,7 @@ class HomeScreen extends React.Component {
         },
         headerTintColor: '#333',
         headerTitleStyle: {
-          fontWeight: 'bold',
+          fontWeight: 'normal',
         },
     }
     render(){

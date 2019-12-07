@@ -5,13 +5,13 @@ import Horizontal_spacer from '../components/Horizontal_spacer';
 
 export default class CheckBoxListScreen extends Component {
     static navigationOptions = {
-        /*title: 'Home --------> Checkbox',*/
+        title: "To Do's",
         headerStyle: {
          // backgroundColor: '#808080',
         },
         headerTintColor: '#333',
         headerTitleStyle: {
-          fontWeight: 'bold',
+          fontWeight: 'normal',
         },
     }
     /*We specify the guideID to know which object from data.json load to the guidedetails under specific checkboxcard */
