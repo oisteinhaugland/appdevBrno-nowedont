@@ -57,12 +57,12 @@ class HomeScreen extends React.Component {
 
                 
 
-                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..."
+                <MainNavCard Navigate={this.NavigateToGuide} GuideID="Emergency" Title="Emergency Contacts" Description="See the contacts for emergencies"
                 iconName="md-close" />    
 
                 
 
-                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..."
+                <MainNavCard Navigate={this.NavigateToGuide} GuideID="ForeignPolice" Title="Foreign Police" Description="For Students not living at the dorms"
                 iconName="md-close"  />    
 
                 

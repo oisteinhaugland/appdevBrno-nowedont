@@ -17,15 +17,49 @@
                 "Title":"Paying the waste fee",
             "ContentArray":[
                 {
-                    "header":"header1 Waste",
-                    "body":"bodyText1 Waste"
+                    "header":"Paying the waste fee.",
+                    "body":"All foreign nationals living temporarily in Brno, longer than 3 months, is obligated to pay a local waste fee. The basic fee is around 670 czk for a calendar year, though the sum might change per year. You don’t have to pay the full amount, only for the period of time you live in Brno.\nIt can be paid in 2 ways:\n\n-	Digitally (recommended)\n-	In person"
                 },
                 {
-                    "header":"header2",
-                    "body":"bodyText2" 
+                    "header":"How to pay digitally: BrnoID",
+                    "body":"The easiest way is to pay through BrnoID.cz. It is a digital platform that helps citizens of Brno use city services online. It’s great, use it.\n\nThis link will take you directly to the payment form. You have to register a basic BrnoID account, which only requires an email and a password.\n\n! – Filling in your arrival date and estimated departure in the form will calculate how much you have to pay.\n\n\n\nThe form should be self-explanatory, but you have to figure out your address and post code. \n\nThis website can help you out:\n\nhttps://worldpostalcode.com/czech-republic/brno-mesto\n\nThere is a search by map function at the bottom \n\n" 
+                },
+                {
+                    "header":"How to pay in Person: Šumavská 35C, 3th floor",
+                    "body":"If for some reason you can’t do your payments online, it can be done in person. Go to this address: Šumavská 35C, 3th floor. \n\nDirections: The closest tram/busstops are Klusáčkova and Tábor. It is a 4-minute walk from each stop. 350-400meters.\n\nTo Klusáčkova by:\n\n-	Tram: #12 (easiest)\n\n-	Buss: #34, #36 #68,\n\nTo Tábor by:\n\n-	Tram: #3, #11 \n\n-	Buss:  #68\n\nWhen making a payment in cash at the cash desk you need to know the name and surname, address and date of birth for each of the fee payers that you are making payment for.\n\nCash desk opening hours:\n\n\n\nMon. and Weds.: 8:00 – 17:00\n\nTues.:                   8:00 – 12:00 and 13:00 – 14:30\n\nThurs.:                 8:00 – 12:00 and 13:00 – 14:00\n\nFri.:                       8:00 – 12:00\n\n"
                 }
             ]
 
+            },
+            "Emergency":{
+                "Title":"Emergency Contacts",
+                "ContentArray":[
+                    {
+                        "header":"Contacts:",
+                        "body":"-Call 112 – General Emergency\n- Call 155 – Medical Emergency\n- Call 150 – Fire Department\n- Call 158 – Police\nInfo:\n122 is the general emergency number in the European Union. It should be used in case of serious emergencies only. As well as their native Czech, the operators also speak English and German. The number is free of charge. Whether the call is made from a fixed line or from a\ncell phone, the caller can be located precisely, and a response team dispatched instantly. The number can be used to reach the police, the fire department or emergency medical assistance."
+                    }
+                ]
+            },
+            "ForeignPolice":{
+                "Title":"Foreign Police Info",
+                "ContentArray":[
+                    {
+                        "header":"Are you an incoming student from any of the EU countries (or from Norway, Lichtenstein, Iceland, Switzerland)?",
+                        "body":"YES: Do you stay in a dormitory owned by the university?\n YES: You don’t need to worry. The residence will take care about your registration.\n NO, staying in a private accommodation: You have to register at foreign police within 30 days after your arrival.\n\n NO: Do you have a long-term visa or long-term residence permit?\n VISA: Do you stay in a dormitory owned by the university?\n YES: You don’t need to worry. The residence will take care about your registration.\n NO, staying in a private accommodation: You have to register at foreign police within 3 working days after your arrival.\n\n RESIDENCE PERMIT: You need to register at Ministry of the Interior within 3 working days after your arrival."
+                    },
+                    {
+                        "header":"For students coming from the EU countries (+ Norway, Lichtenstein, Iceland, Switzerland) and students with long-term visa",
+                        "body":"This is the address to remember:\nFOREIGN POLICE (Cizinecká policie)\nAddress: Cejl 62b, Brno\nTelephone: +420 974 628 131\nOffice hours:\nMonday and Wednesday:  8a.m. – 5p.m.\nTuesday and Thursday:      8a.m. – 2p.m.\nFriday:                                   none"
+                    },
+                    {
+                        "header":"!WARNING!",
+                        "body":"The employees at the Foreign Police office DO NOT NORMALLY SPEAK ENGLISH. It is best if you bring a local Czech student that can help you translate. We recommend getting help from your local ESN group."
+                    },
+                    {
+                        "header":"For students with long-term residence permit for the purposes of studies:",
+                        "body":"MINISTRY OF THE INTERIOR, Department for Asylum and Migration Policy\n(Ministerstvo vnitra, odbor azylové a migrační politiky)\nAddress: Hněvkovského 30/65, Brno\nTelephone: +420 543 213 313\nOffice hours:\nMonday and Wednesday:  8 a.m. – 5 p.m.\nTuesday and Thursday:      8 a.m. – 2 p.m.\nFriday:                                   none"
+                    }
+                ]
             }
 
         }
