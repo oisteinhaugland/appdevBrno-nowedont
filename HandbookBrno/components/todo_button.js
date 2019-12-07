@@ -14,64 +14,73 @@ import * as todo_list_states from '../data/todo_list_states.json';
 class Todo_button extends React.Component {
 
 
-  _storeData = async () => {
+  _storeData = async (itemName, itemValue) => {
     try {
-      await AsyncStorage.setItem('@complete:key', 'i loke ');
+      await AsyncStorage.setItem(itemName, itemValue);
     } catch (error) {
       // Error saving data
     }
   };
 
-  _retrieveData = async () => {
+  _retrieveData = async (itemName) => {
     try {
-      const value = await AsyncStorage.getItem('complete');
+      const value = await AsyncStorage.getItem(itemName);
       if (value !== null) {
         // We have data!!
-        console.log(value);
+        return value;
       }
     } catch (error) {
       // Error retrieving data
     }
   };
 
-/*
+
   componentDidMount(){
       
-      this.setState({
-        completed : todo_list_states[this.props.identifier]
-      })
+      //this.setState({
+      //  completed : todo_list_states[this.props.identifier]
+      //})
+      //this._storeData(this.props.identifier, "somevalue");
+     // this._retrieveData(this.props.identifier).then(k => {this.setState({completed: k})});
           
   }
-*/
+
   constructor(props){
     super (props)
     this.text = props.text
-    this.state = { completed : false}
-    this.completed_text = "Completed "
-    this.not_completed_text = "Mark as complete"
-    
-    if(this.state.completed == true){
-      this.SetCompletedStyles();
-    } else {
-      this.SetNotCompletedStyles();
-    }
+    this.state = { completed : 'false'}
+    this._retrieveData(this.props.identifier).then(k => {this.setState({completed: k})}).then(()=>{
+      this.completed_text = "Completed "
+      this.not_completed_text = "Mark as complete"
+      
+      if(this.state.completed == 'true'){
+        this.SetCompletedStyles();
+      } else {
+        this.SetNotCompletedStyles();
+      }
+      this.forceUpdate();
+    });
+
+  
   }
 
   onPress = () => {
 
-    if(this.state.completed == false){
+    if(this.state.completed == 'false'){
       
         this.setState({  
-          completed: true  
+          completed: 'true'  
         })
+        this._storeData(this.props.identifier, 'true');
         this.SetCompletedStyles();
 
 
     }  else {
 
         this.setState({  
-          completed: false  
+          completed: 'false'  
         })
+        this._storeData(this.props.identifier, 'false');
         this.SetNotCompletedStyles();  
 
     }  
@@ -151,7 +160,7 @@ const styles = StyleSheet.create({
       justifyContent:"center",
       alignSelf:'center',
       borderRadius:2,
-      backgroundColor:"green",
+      backgroundColor:"#2ecc71",
       flex:3,
       shadowColor: "#000",
       shadowOffset: {
