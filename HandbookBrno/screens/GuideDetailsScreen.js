@@ -4,29 +4,30 @@ import {View, ScrollView, Text, FlatList, StyleSheet} from 'react-native';
 import * as data from '../data/data.json';
 
 export default class GuideDetailsScreen extends Component {
-  static navigationOptions = {
-    title: "this.state.GuideData.Title",
-    headerStyle: {
-     // backgroundColor: '#808080',
-     // fontfamily:palatino,
-    },
-    headerTintColor: '#333',
-    headerTitleStyle: {
-      fontWeight: 'bold',
-    },
-}
+  static navigationOptions = ({ navigation }) => {
+    return {
+      title: navigation.getParam('Title', ''),
+    };
+  };
   
   constructor(props) {
     super(props)
     this.state = {
       GuideData: data["guides"][this.props.navigation.getParam('ID', 'NO-ID')],
     }
+
    // console.log(data["guides"][this.props.navigation.getParam('ID', 'NO-ID')]);
   }
-  componentDidMount(){
+  componentWillMount(){
     
+    this.props.navigation.setParams({
+      Title: this.state.GuideData.Title
+    });
+
   }
+
   renderParagraph = ({header, body}) =>{
+    
     return (
       <View style={styles.BodyBlock}>
         <Text style={styles.Header}>{header}</Text>
@@ -39,7 +40,7 @@ export default class GuideDetailsScreen extends Component {
     return (
       <View>
       <ScrollView>
-        <View style={styles.Title}><Text style={styles.TitleText}>{this.state.GuideData.Title}</Text></View>
+        {/*<View style={styles.Title}><Text style={styles.TitleText}>{this.state.GuideData.Title}</Text></View>*/}
         <FlatList
         data={this.state.GuideData.ContentArray}
         renderItem={({ item }) => <this.renderParagraph header={item.header} body={item.body} />}
