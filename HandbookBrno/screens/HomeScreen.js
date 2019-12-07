@@ -14,8 +14,8 @@ class HomeScreen extends React.Component {
     /*This is how we navigate to other components, if you're unsure what is routeName check navigation/CoursesNavigation.js
     Also props.navigation methods are only passed down to components specified in Navigator file so if you want to use them in
     sub components you have to do it like i did it here with passing down a function, not sure if there is another way */
-    NavigateToGuide = () =>{
-        this.props.navigation.navigate({routeName: 'GuideList'});
+    NavigateToGuide = (guideID) =>{
+        this.props.navigation.navigate('GuideDetails', { ID : guideID});
     }
     /*Navigation to survival guide */
     NavigateToCheckBox = () =>{
@@ -48,10 +48,11 @@ class HomeScreen extends React.Component {
                 Title="Public Transport" 
                 Description="How to get tram / buss cards"
                 iconName="md-bus"
+                GuideID="TramCard"
                  />
 
 
-                <MainNavCard Navigate={this.NavigateToGuide} Title="Waste Fee" Description="Required if you stay more than 3 months"
+                <MainNavCard Navigate={this.NavigateToGuide} GuideID="WasteFee" Title="Waste Fee" Description="Required if you stay more than 3 months"
                 iconName="md-cash" />
 
                 
