@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, TouchableHighlight, CheckBox, Button} from 'reac
 import CustomText from '../components/CustomText';
 import Todo_Button from '../components/todo_button';
 
-const CheckBoxCard = ({Title, Color, Navigate, GuideID, Description}) => {
+const CheckBoxCard = ({Title, Color, Navigate, GuideID, Description,identifier}) => {
     /*Just return the style for the NavCard with a specified Color in props
     no need to get into this, just know that its used to style the cards color */
     const NavColor = (color) =>{
@@ -31,7 +31,8 @@ const CheckBoxCard = ({Title, Color, Navigate, GuideID, Description}) => {
                   </View>
                   
                 
-                  <Todo_Button text="Mark as complete"></Todo_Button>
+                  <Todo_Button text="Mark as complete"
+                  identifier={identifier}></Todo_Button>
                   
               </View>
             

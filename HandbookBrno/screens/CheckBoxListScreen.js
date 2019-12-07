@@ -23,7 +23,8 @@ export default class CheckBoxListScreen extends Component {
         return (
             <View>
                 
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Learning Agreement" Description="Get learning agreement signed at your faculty" />
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Learning Agreement" Description="Get learning agreement signed at your faculty"  
+                identifier="Learning"/>
 
                 
 
