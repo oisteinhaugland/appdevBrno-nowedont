@@ -49,7 +49,13 @@ class Todo_button extends React.Component {
     super (props)
     this.text = props.text
     this.state = { completed : 'false'}
-    this._retrieveData(this.props.identifier).then(k => {this.setState({completed: k})}).then(()=>{
+    this._retrieveData(this.props.identifier).then(k => {
+      if(k != "true" && k != "false"){
+        this.setState({completed: "false"})
+      }
+      else this.setState({completed: k})
+
+      }).then(()=>{
       this.completed_text = "Completed "
       this.not_completed_text = "Mark as complete"
       
@@ -65,7 +71,7 @@ class Todo_button extends React.Component {
   }
 
   onPress = () => {
-
+    console.log(this.state);
     if(this.state.completed == 'false'){
       
         this.setState({  
