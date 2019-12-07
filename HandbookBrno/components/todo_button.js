@@ -6,23 +6,47 @@ import {
   Animated, // provides methods for animating components
   Easing // for implementing easing functions
 } from "react-native";
+import { AsyncStorage } from 'react-native';
+
 
 import * as todo_list_states from '../data/todo_list_states.json';
 
 class Todo_button extends React.Component {
 
+
+  _storeData = async () => {
+    try {
+      await AsyncStorage.setItem('@complete:key', 'i loke ');
+    } catch (error) {
+      // Error saving data
+    }
+  };
+
+  _retrieveData = async () => {
+    try {
+      const value = await AsyncStorage.getItem('complete');
+      if (value !== null) {
+        // We have data!!
+        console.log(value);
+      }
+    } catch (error) {
+      // Error retrieving data
+    }
+  };
+
+/*
   componentDidMount(){
-    console.log(todo_list_states[this.props.identifier]);  
+      
       this.setState({
         completed : todo_list_states[this.props.identifier]
       })
           
   }
-
+*/
   constructor(props){
     super (props)
     this.text = props.text
-    this.state = { completed: todo_list_states[this.props.identifier] }
+    this.state = { completed : false}
     this.completed_text = "Completed "
     this.not_completed_text = "Mark as complete"
     
@@ -40,17 +64,17 @@ class Todo_button extends React.Component {
         this.setState({  
           completed: true  
         })
-        this.SetcompletedStyles();
+        this.SetCompletedStyles();
+
+
     }  else {
 
         this.setState({  
           completed: false  
         })
         this.SetNotCompletedStyles();  
-          
-    }
-    
 
+    }  
   }
 
 

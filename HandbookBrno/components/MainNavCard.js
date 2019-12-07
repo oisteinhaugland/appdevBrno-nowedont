@@ -1,8 +1,6 @@
 import React from 'react'
 import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
 import CustomText from '../components/CustomText';
-import FontAwesome, { SolidIcons, RegularIcons, BrandIcons } from 'react-native-fontawesome';
-
 import { Ionicons } from '@expo/vector-icons';
 
 const MainNavCard = ({Title, Description, Color, Navigate,iconName,iconColor="#333"}) => {
