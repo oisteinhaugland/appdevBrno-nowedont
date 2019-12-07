@@ -2,7 +2,7 @@ import React from 'react'
 import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
 import CustomText from '../components/CustomText';
 
-const MainNavCard = ({Title, Description, Color, Navigate}) => {
+const MainNavCard = ({Title, Description, Color, Navigate, GuideID}) => {
     /*Just return the style for the NavCard with a specified Color in props
     no need to get into this, just know that its used to style the cards color */
     const NavColor = (color) =>{
@@ -19,7 +19,7 @@ const MainNavCard = ({Title, Description, Color, Navigate}) => {
     onPress uses the function passed down from homeScreenComponent, the rest are styles
     also needs a little bit of working on the styles since it highlights the whole section not just the card*/
     return (
-        <TouchableHighlight underlayColor="white" activeOpacity={0.5} onPress={Navigate}>
+        <TouchableHighlight underlayColor="white" activeOpacity={0.5} onPress={()=>{Navigate(GuideID)}}>
             <View style={NavColor(Color)}>
                 
                 <View style={styles.flex_spacing}>
