@@ -17,10 +17,12 @@ const styles = StyleSheet.create({
         fontSize: 18,
         margin: 10,
     },
-    Border: {
-        borderBottomColor: 'lightgray',
-        borderBottomWidth: 2,
-        marginHorizontal: 15,
+    Border:{
+        borderBottomColor: 'gray',
+        borderBottomWidth: 1,
+        marginHorizontal:20,
+        margin:10,
+        
     },
 });
 

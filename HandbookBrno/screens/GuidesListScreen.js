@@ -1,20 +1,35 @@
-import React from 'react'
-import { ScrollView, Text, StyleSheet, Button } from 'react-native';
+import React, {Component} from 'react'
+import {View, Text, StyleSheet, Button} from 'react-native';
 
-const GuidesListScreen = (props) => {
-    return (
-        <ScrollView>
-            <Text>Here you can find places where
-                to eat or buy food. </Text>
-            <Button title="Go to Details" onPress={() => {
-                props.navigation.navigate({
-                    routeName: 'GuideDetails',
-                })
+export default class GuidesListScreen extends Component {
+    static navigationOptions = {
+        /*title: 'Home --------> Checkbox',*/
+        headerStyle: {
+         // backgroundColor: '#808080',
+        },
+        headerTintColor: '#333',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+        },
+    }
+    /*We specify the guideID to know which object from data.json load to the guidedetails under specific checkboxcard */
+    NavigateToGuide = (guideID) =>{
+        this.props.navigation.navigate('GuideDetails', { ID : guideID});
+    }
+
+    render() {
+        return (
+            <View style={styles.container}>
+            <Text>Guide List</Text>
+            <Button title="Go to Details" onPress={()=>{
+                this.NavigateToGuide()
             }}>
             </Button>
-        </ScrollView>
+            </View>
     )
 }
+}
+
 
 const styles = StyleSheet.create({
     text: {
@@ -26,5 +41,5 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-});
-export default GuidesListScreen
+  
+  });

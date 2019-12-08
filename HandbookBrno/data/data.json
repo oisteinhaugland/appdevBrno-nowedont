@@ -1,0 +1,131 @@
+{
+    "guides" :
+        {"TramCard":{
+            "Title":"Public transport",
+            "ContentArray":[
+                {
+                    "header":"Long term tickets",
+                    "body":[
+                        {"Text":"If you are a student under 26, you are entitled to a reduced student-rate pass for two zones (100 and 101) which is the most practical. ", "id":"1"},
+                        {"Text":"To get your Public transport ticket you have two options: \n\n•   Physical transport pass \n\n•   Electronic transport pass\n\n", "id":"2"},
+                        {"Text":"We recommend getting the Electronic pass, all you need is a contactless bank card (it will be your ticket carrier) and a card with authorised online international payments to pay for the ticket. After your arrival in Brno, you only have to go to one of the DPMB shops once to verify your Brno ID account and then you can conveniently buy your monthly/quarterly tickets online. You can find the detailed guide here(link to pdf).\n\nIf you decide to get a physical version you need ISIC/STUDENT CARD, ID/Passport, photo(25x25), money. You will take all of these things and go to the Public Transport office (Novobranská 693/18, 602 00 Brno-střed) and get your Tram Ticket (Šalinkartu) there!\n\n","id":"3"}
+                    ]
+                },
+                {
+                    "header":"Single use tickets",
+                    "body":[
+                        {"Text":"For occasional travel around Brno, you can buy a single-use ticket. Its validity is time and zone limited (zones 100 and 101 will suffice).", "id":"1"},
+                        {"Text":" Tickets are sold through yellow vending machines at some stops, DPMB shops, kiosks and railway stations.", "id":"2"},                       
+                        {"Text":" You can also buy a ticket for a higher price in the bus or tram, just ask the driver and be sure to have the exact amount of money. The ticket is valid from the moment it has been validated for the period specified on it and only in those tariff zones marked on the ticket. Aside from special tickets valid outside of zones 100 and 101, you can change vehicles with all kinds of tickets within the time limit. ", "id":"3"},
+                        {"Text":"The ticket does not have to be validated again during transfers.\n\nYou can also buy an SMS ticket by sending a text to number 90206, but it is only possible with a Czech SIM card (make sure the “Premium SMS” service is activated with your mobile provider). You have to wait for the confirmation SMS (approximately 2 minutes) before you board the vehicle.\n\n•  “BRNO20” 20 minutes ticket for 20 CZK\n\n•  “BRNO” 75 minutes ticket for 29 CZK\n\n•  “BRNOD” 24 hours ticket for 99 CZK\n\nAnother option is to use DPMB app and buy it through it.\n ", "id":"4"}                 
+                    ]
+                }
+            ]
+            },
+            "WasteFee":{
+                "Title":"Paying the waste fee",
+            "ContentArray":[
+                {
+                    "header":"Paying the waste fee.",
+                    "body":[
+                        {"Text":"All foreign nationals living temporarily in Brno, longer than 3 months, is obligated to pay a local waste fee. The basic fee is around 670 czk for a calendar year, though the sum might change per year. You don’t have to pay the full amount, only for the period of time you live in Brno.\nIt can be paid in 2 ways:\n\n-	Digitally (recommended)\n-	In person", "id":"1"}
+                    ]
+                    },
+                {
+                    "header":"How to pay digitally: BrnoID",
+                    "body":[
+                        {"Text":"The easiest way is to pay through BrnoID.cz. It is a digital platform that helps citizens of Brno use city services online. It’s great, use it.\n\nThis link will take you directly to the payment form. You have to register a basic BrnoID account, which only requires an email and a password.\n\n! – Filling in your arrival date and estimated departure in the form will calculate how much you have to pay.\n\n\n\nThe form should be self-explanatory, but you have to figure out your address and post code. \n\nThis website can help you out:\n\nhttps://worldpostalcode.com/czech-republic/brno-mesto\n\nThere is a search by map function at the bottom \n\n", "id":"1"}
+                    ]
+                },
+                {
+                    "header":"How to pay in Person: Šumavská 35C, 3th floor",
+                    "body":[
+                        {"Text":"If for some reason you can’t do your payments online, it can be done in person. Go to this address: Šumavská 35C, 3th floor. \n\nDirections: The closest tram/busstops are Klusáčkova and Tábor. It is a 4-minute walk from each stop. 350-400meters.\n\nTo Klusáčkova by:\n\n-	Tram: #12 (easiest)\n\n-	Buss: #34, #36 #68,\n\nTo Tábor by:\n\n-	Tram: #3, #11 \n\n-	Buss:  #68\n\nWhen making a payment in cash at the cash desk you need to know the name and surname, address and date of birth for each of the fee payers that you are making payment for.\n\nCash desk opening hours:\n\n\n\nMon. and Weds.: 8:00 – 17:00\n\nTues.:                   8:00 – 12:00 and 13:00 – 14:30\n\nThurs.:                 8:00 – 12:00 and 13:00 – 14:00\n\nFri.:                       8:00 – 12:00\n\n", "id":"1"}
+                    ]
+                }
+            ]
+
+            },
+            "Emergency":{
+                "Title":"Emergency Contacts",
+                "ContentArray":[
+                    {
+                        "header":"Contacts:",
+                        "body":[
+                            {"Text":"-Call 112 – General Emergency\n- Call 155 – Medical Emergency\n- Call 150 – Fire Department\n- Call 158 – Police\nInfo:\n122 is the general emergency number in the European Union. It should be used in case of serious emergencies only. As well as their native Czech, the operators also speak English and German. The number is free of charge. Whether the call is made from a fixed line or from a\ncell phone, the caller can be located precisely, and a response team dispatched instantly. The number can be used to reach the police, the fire department or emergency medical assistance.", "id":"1"}
+                        ]
+                    }
+                ]
+            },
+            "ForeignPolice":{
+                "Title":"Foreign Police Info",
+                "ContentArray":[
+                    {
+                        "header":"Are you an incoming student from any of the EU countries (or from Norway, Lichtenstein, Iceland, Switzerland)?",
+                        "body":[
+                            {"Text":"YES: Do you stay in a dormitory owned by the university?\n YES: You don’t need to worry. The residence will take care about your registration.\n NO, staying in a private accommodation: You have to register at foreign police within 30 days after your arrival.\n\n NO: Do you have a long-term visa or long-term residence permit?\n VISA: Do you stay in a dormitory owned by the university?\n YES: You don’t need to worry. The residence will take care about your registration.\n NO, staying in a private accommodation: You have to register at foreign police within 3 working days after your arrival.\n\n RESIDENCE PERMIT: You need to register at Ministry of the Interior within 3 working days after your arrival.", "id":"1"}
+                        ]
+                    },
+                    {
+                        "header":"For students coming from the EU countries (+ Norway, Lichtenstein, Iceland, Switzerland) and students with long-term visa",
+                        "body":[
+                            {"Text":"This is the address to remember:\nFOREIGN POLICE (Cizinecká policie)\nAddress: Cejl 62b, Brno\nTelephone: +420 974 628 131\nOffice hours:\nMonday and Wednesday:  8a.m. – 5p.m.\nTuesday and Thursday:      8a.m. – 2p.m.\nFriday:                                   none", "id":"1"}
+                        ]
+                    },
+                    {
+                        "header":"!WARNING!",
+                        "body":[
+                            {"Text":"The employees at the Foreign Police office DO NOT NORMALLY SPEAK ENGLISH. It is best if you bring a local Czech student that can help you translate. We recommend getting help from your local ESN group.", "id":"1"}
+                        ]
+                    },
+                    {
+                        "header":"For students with long-term residence permit for the purposes of studies:",
+                        "body":[
+                            {"Text":"MINISTRY OF THE INTERIOR, Department for Asylum and Migration Policy\n(Ministerstvo vnitra, odbor azylové a migrační politiky)\nAddress: Hněvkovského 30/65, Brno\nTelephone: +420 543 213 313\nOffice hours:\nMonday and Wednesday:  8 a.m. – 5 p.m.\nTuesday and Thursday:      8 a.m. – 2 p.m.\nFriday:                                   none", "id":"1"}
+                        ]
+                    }
+                ]
+            },
+            "TestNewStructure":{
+                "Title":"TestTest",
+                "ContentArray":[
+                    {
+                        "header":"Here is the test",
+                        "body":[
+                            {"Text":"Text1", "id":"1"},
+                            {"Text":"Text2", "id":"2"},
+                            {"ImageName":"ForeignPoliceMap","Width":100,"Height":100, "id":"3"},
+                            {"Text":"Text3", "id":"4"},
+                            {"LinkText":"Link", "Link":"http://google.com", "id":"5"}
+                        ]
+                    }
+                ]
+            },
+            "LearningAgreement":{
+                "Title":"Learning agreement guide",
+                "ContentArray":[
+                    {
+                        "header":"Here is the guide",
+                        "body":[
+                            {"Text":"This is how to do it", "id":"1"}
+                        ]
+                    }
+                ]
+            },
+            "404":{
+                "Title":"Error 404",
+                "ContentArray":[
+                    {
+                        "header":"Guide is not implemented !Yet! ;)",
+                        "body":[
+                            {"Text":"", "id":"1"}
+                        ]
+                    }
+                ]
+            }
+
+        }
+    ,
+    "MD":"#Appdevelopment  Student survival Guide\n\nTheme 1  Paying the waste fee.\n\n All foreign nationals living temporarily in Brno, longer than 3 months, is obligated to pay a local waste fee. The basic fee is around 670 czk for a calendar year, though the sum might change per year. You don&#39;t have to pay the full amount, only for the period of time you live in Brno.\n\n It can be paid in 2 ways\n\n  Digitally (recommended)\n\n  In person\n\n #How to pay digitally: BrnoID  [https://www.brnoid.cz/en/payforwaste](https://www.brnoid.cz/en/payforwaste) The easiest way is to pay through BrnoID.cz. It is a digital platform that helps citizens of Brno use city services online. It&#39;s great, use it.\n\n [This link](https://www.brnoid.cz/en/payforwaste) will take you directly to the payment form. You have to register a basic BrnoID account, which only requires an email and a password.\n\n !  Filling in your arrival date and estimated departure in the form will calculate how much you have to pay.\n\n The form should be selfexplanatory, but you have to figure out your address and post code.\n\n This website can help you out:\n\n [https://worldpostalcode.com/czechrepublic/brnomesto](https://worldpostalcode.com/czechrepublic/brnomesto) There is a search by map function at the bottom \n\n #How to pay in Person: Šumavská 35C, 3th floor\n\n If for some reason you can&#39;t do your payments online, it can be done in person. Go to this address:Šumavská 35C, 3th floor.\n\n Directions: The closest tram/busstops are **Klusáčkova** and **Tábor**. It is a 4minute walk from each stop. 350400meters.\n\n To **Klusáčkova** by:\n\n  Tram: #12 (easiest)\n\n  Buss: #34, #36 #68,\n\n To **Tábor** by:\n\n  Tram: #3, #11\n\n  Buss:  #68\n\n When making a payment in cash at the cash desk you need to know the name and surname, address and date of birth for each of the fee payers that you are making payment for.\n\n **Cash desk opening hours:**\n\n Mon. and Weds.: 8:00  17:00\n\n Tues.:                   8:00  12:00 and 13:00  14:30\n\n Thurs.:                 8:00  12:00 and 13:00  14:00\n\n Fri.:                       8:00  12:00\n\n",
+    "NewMarkDown":"###NEW ONE"
+}

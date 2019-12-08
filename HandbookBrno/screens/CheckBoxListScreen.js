@@ -1,29 +1,57 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
+import {View, ScrollView} from 'react-native'
 import CheckBoxCard from '../components/CheckBoxCard';
+import Horizontal_spacer from '../components/Horizontal_spacer';
+
 export default class CheckBoxListScreen extends Component {
     static navigationOptions = {
-        title: 'Survival guide',
+        title: "To Do's",
         headerStyle: {
-            backgroundColor: '#808080',
+         // backgroundColor: '#808080',
         },
-        headerTintColor: '#fff',
+        headerTintColor: '#333',
         headerTitleStyle: {
-            fontWeight: 'bold',
+          fontWeight: 'normal',
         },
     }
-    NavigateToDetails = () => {
-        this.props.navigation.navigate({ routeName: 'CheckBoxDetails' });
+    /*We specify the guideID to know which object from data.json load to the guidedetails under specific checkboxcard */
+    NavigateToGuide = (guideID) =>{
+        this.props.navigation.navigate('GuideDetails', { ID : guideID});
     }
 
     render() {
         return (
-            <View>
-                <CheckBoxCard Navigate={this.NavigateToDetails} Title="Paid waste fee" Color="#ACDDDE" />
-                <CheckBoxCard Navigate={this.NavigateToDetails} Title="Have tram card" Color="#ACDDDE" />
-                <CheckBoxCard Navigate={this.NavigateToDetails} Title="Paid rent" Color="#ACDDDE" />
-                <CheckBoxCard Navigate={this.NavigateToDetails} Title="Opened Czech bank account" Color="#ACDDDE" />
-            </View>
+            <ScrollView>
+                
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="LearningAgreement" Title="Learning Agreement" Description="Get learning agreement signed at your faculty"  
+                identifier="Learning"/>
+
+                
+
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Accomodation office" Description="Get documents signed" identifier="WasteFee" />
+
+                
+
+                <CheckBoxCard Navigate={this.NavigateToGuide} 
+                GuideID="TramCard" 
+                Title="Public transport" 
+                Description ="Aquire a tram/buss card"
+                identifier="PublicTransport"
+                />
+
+                
+
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="WasteFee" Title="Waste Tax" Description="Pay Waste tax before deadline" identifier="WasteTax" />
+                
+                
+              
+
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Czech Bank-account" Description="Open czech account to receive scholarship (Free money)" identifier="bank"/>
+
+                
+
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Get crack" identifier="GetCrack"/>
+            </ScrollView>
         )
     }
 }

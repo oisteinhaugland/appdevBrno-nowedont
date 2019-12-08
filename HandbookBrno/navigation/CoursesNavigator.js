@@ -19,4 +19,5 @@ const CourseNavigator = createStackNavigator({
     CheckBoxDetails: CheckBoxListDetailsScreen,
 });
 
+
 export default createAppContainer(CourseNavigator);
