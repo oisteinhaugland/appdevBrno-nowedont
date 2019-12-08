@@ -34,7 +34,7 @@ export default class GuidesListScreen extends Component {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: 'white',
+      backgroundColor: '#fefefe',
       alignItems: 'center',
       justifyContent: 'center',
     },

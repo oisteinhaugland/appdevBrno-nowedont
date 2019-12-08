@@ -9,9 +9,9 @@ export default class CheckBoxListScreen extends Component {
         headerStyle: {
          // backgroundColor: '#808080',
         },
-        headerTintColor: '#333',
+        //headerTintColor: '#333',
         headerTitleStyle: {
-          fontWeight: 'normal',
+          //fontWeight: 'normal',
         },
     }
     /*We specify the guideID to know which object from data.json load to the guidedetails under specific checkboxcard */

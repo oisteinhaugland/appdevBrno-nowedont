@@ -2,6 +2,7 @@ import React from 'react'
 import {View, Text, StyleSheet, TouchableHighlight, CheckBox, Button} from 'react-native';
 import CustomText from '../components/CustomText';
 import Todo_Button from '../components/todo_button';
+import {font_styles,color_scheme} from '../assets/general_styles/general_style.js';
 
 const CheckBoxCard = ({Title, Color, Navigate, GuideID, Description,identifier}) => {
     /*Just return the style for the NavCard with a specified Color in props
@@ -25,13 +26,13 @@ const CheckBoxCard = ({Title, Color, Navigate, GuideID, Description,identifier})
                   
                   <View style={styles.Description}>
                     <Text style={styles.Title}>{Title}</Text>
-                    <Text>
+                    <Text style={styles.Text}>
                       {Description}
                     </Text>
                   </View>
                   
                 
-                  <Todo_Button text="Mark as complete"
+                  <Todo_Button 
                   identifier={identifier}></Todo_Button>
                   
               </View>
@@ -52,21 +53,17 @@ const styles = StyleSheet.create({
 
       shadowColor: "#000",
       shadowOffset: {
-	  width: 0,
-	  height: 2,
-},
-  shadowOpacity: 0.25,
-  shadowRadius: 3.84,
-
-  elevation: 5,
-
+	    width: 0,
+	    height: 2,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+      elevation: 5,
 
 
     },
 
     Description:{
-      fontSize:15,
-      fontWeight:'normal',
       marginBottom: 2,
       flex:6,
       flexDirection:"column",
@@ -74,10 +71,15 @@ const styles = StyleSheet.create({
   },
 
     Title:{
-        fontSize:23,
-        fontWeight:'normal',
+        fontSize:font_styles.header_size,
+        fontWeight:font_styles.header_weight,
         marginBottom: 2,
     },
+    Text:{
+
+      fontSize:font_styles.text_size,
+      fontWeight:font_styles.text_weight,
+    }
 
   });
 
