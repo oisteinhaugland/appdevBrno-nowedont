@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, FlatList} from 'react-native';
+import {View, FlatList, ScrollView} from 'react-native';
 import Header from '../components/Header';
 import * as Font from 'expo-font';
 import MainNavCard from '../components/MainNavCard';
@@ -35,7 +35,11 @@ class HomeScreen extends React.Component {
     }
     render(){
         return (
-            <View style={styles.container}>
+            <ScrollView style={styles.container}>
+
+                <MainNavCard Navigate={this.NavigateToGuide} GuideID="TestNewStructure" Title="Testo" Description="For Students not living at the dorms"
+                iconName="md-close"  />    
+
                 {/*<Header/> commented out because react-navigation has its own header
                 Also the huge amount of MainNavCards its just for now just to see how it looks
                 <OtherCategories/>*/}
@@ -67,7 +71,7 @@ class HomeScreen extends React.Component {
 
                 
                 
-            </View>
+            </ScrollView>
         );
     }
 

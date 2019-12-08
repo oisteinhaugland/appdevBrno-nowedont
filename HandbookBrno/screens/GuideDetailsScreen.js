@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
-import {View, ScrollView, Text, FlatList, StyleSheet} from 'react-native';
+import {View, ScrollView, Text, FlatList, StyleSheet, Image, Linking} from 'react-native';
 
 import * as data from '../data/data.json';
+
+import {images} from '../data/Images.js';
 
 export default class GuideDetailsScreen extends Component {
   static navigationOptions = ({ navigation }) => {
@@ -31,7 +33,33 @@ export default class GuideDetailsScreen extends Component {
     return (
       <View style={styles.BodyBlock}>
         <Text style={styles.Header}>{header}</Text>
-        <Text style={styles.BodyText}>{body}</Text>
+        <FlatList
+        data={body}
+        renderItem={({ item }) => {
+          if(item.Text != null){
+            //Normal body text style it here !!!!
+            return <Text style={styles.BodyText}>{item.Text}</Text>
+          }
+          if(item.ImageName !=null){
+            for(let i =0; i< images.length;i++){
+              if(images[i].imgName == item.ImageName){
+                //Image styling do it here if needed Wrap it in a view for styling later
+                return <Image style={{width: item.Width, height: item.Height}} source={images[i].uri}/>
+              }
+            }
+            return <Text>ImgNotFound</Text>
+          }
+          if(item.LinkText !=null){
+            //LINK styles here
+            return <Text style={{color: 'blue'}}
+                    onPress={() => Linking.openURL(item.Link)}>
+                    {item.LinkText}
+                   </Text>
+          }
+          //console.log(item);
+        }}
+        keyExtractor={item => item.id}
+      />
       </View>
     );
   }
