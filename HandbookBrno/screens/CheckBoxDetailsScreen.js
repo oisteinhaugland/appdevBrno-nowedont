@@ -1,10 +1,10 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native';
 
-const GuideDetailsScreen = () => {
+const CheckboxDetailsScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Guide Details</Text>
+      <Text>You should do</Text>
     </View>
   )
 }
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default GuideDetailsScreen
+export default CheckboxDetailsScreen

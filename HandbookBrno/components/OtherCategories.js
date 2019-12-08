@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 const OtherCategories = () => {
     /*Just a simple styled component no functionality here */
@@ -10,18 +10,18 @@ const OtherCategories = () => {
         </View>
     )
 }
+
 const styles = StyleSheet.create({
     TextStyle: {
-      color: 'gray',
-      fontSize:25,
-      margin:10,
+        color: 'gray',
+        fontSize: 18,
+        margin: 10,
     },
-    Border:{
-        borderBottomColor: 'gray',
-        borderBottomWidth: 1,
-        marginHorizontal:20,
-        
+    Border: {
+        borderBottomColor: 'lightgray',
+        borderBottomWidth: 2,
+        marginHorizontal: 15,
     },
-  });
+});
 
 export default OtherCategories
