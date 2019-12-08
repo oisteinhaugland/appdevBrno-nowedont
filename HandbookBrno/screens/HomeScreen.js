@@ -4,10 +4,7 @@ import Header from '../components/Header';
 import * as Font from 'expo-font';
 import MainNavCard from '../components/MainNavCard';
 import OtherCategories from '../components/OtherCategories';
-import {StyleSheet} from 'react-native';
-import Horizontal_spacer from '../components/Horizontal_spacer';
-
-
+import Colors from '../styles/colors';
 
 class HomeScreen extends React.Component {
 
@@ -41,37 +38,14 @@ class HomeScreen extends React.Component {
                 iconName="md-close"  />    
 
                 {/*<Header/> commented out because react-navigation has its own header
-                Also the huge amount of MainNavCards its just for now just to see how it looks
-                <OtherCategories/>*/}
-                <MainNavCard Navigate={this.NavigateToCheckBox} Title="Start Here - Essential To Do List" Description="Important things to remember to do upon arrival"
-                iconName="md-alert"
-                iconColor="#f39c12"
-                />  
-
-                <MainNavCard Navigate={this.NavigateToGuide} 
-                Title="Public Transport" 
-                Description="How to get tram / buss cards"
-                iconName="md-bus"
-                GuideID="TramCard"
-                 />
-
-
-                <MainNavCard Navigate={this.NavigateToGuide} GuideID="WasteFee" Title="Waste Fee" Description="Required if you stay more than 3 months"
-                iconName="md-cash" />
-
-                
-
-                <MainNavCard Navigate={this.NavigateToGuide} GuideID="Emergency" Title="Emergency Contacts" Description="See the contacts for emergencies"
-                iconName="md-close" />    
-
-                
-
-                <MainNavCard Navigate={this.NavigateToGuide} GuideID="ForeignPolice" Title="Foreign Police" Description="For Students not living at the dorms"
-                iconName="md-close"  />    
-
-                
-                
-            </ScrollView>
+                Also the huge amount of MainNavCards its just for now just to see how it looks*/}
+                <MainNavCard Navigate={this.NavigateToGuide} Title="Survival Guide" Description="Something, Something, Something, Something,..."/>
+                <OtherCategories/>
+                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#38B9D8"/>
+                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#81D2C7"/>
+                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#E0E0E2"/>    
+                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#416788"/>    
+            </View>
         );
     }
 
