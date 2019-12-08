@@ -100,6 +100,28 @@
                         ]
                     }
                 ]
+            },
+            "LearningAgreement":{
+                "Title":"Learning agreement guide",
+                "ContentArray":[
+                    {
+                        "header":"Here is the guide",
+                        "body":[
+                            {"Text":"This is how to do it", "id":"1"}
+                        ]
+                    }
+                ]
+            },
+            "404":{
+                "Title":"Error 404",
+                "ContentArray":[
+                    {
+                        "header":"Guide is not implemented !Yet! ;)",
+                        "body":[
+                            {"Text":"", "id":"1"}
+                        ]
+                    }
+                ]
             }
 
         }

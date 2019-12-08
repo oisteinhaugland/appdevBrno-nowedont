@@ -23,17 +23,17 @@ export default class CheckBoxListScreen extends Component {
         return (
             <ScrollView>
                 
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Learning Agreement" Description="Get learning agreement signed at your faculty"  
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="LearningAgreement" Title="Learning Agreement" Description="Get learning agreement signed at your faculty"  
                 identifier="Learning"/>
 
                 
 
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Accomodation office" Description="Get documents signed" identifier="WasteFee" />
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Accomodation office" Description="Get documents signed" identifier="WasteFee" />
 
                 
 
                 <CheckBoxCard Navigate={this.NavigateToGuide} 
-                GuideID="MD" 
+                GuideID="TramCard" 
                 Title="Public transport" 
                 Description ="Aquire a tram/buss card"
                 identifier="PublicTransport"
@@ -41,16 +41,16 @@ export default class CheckBoxListScreen extends Component {
 
                 
 
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Waste Tax" Description="Pay Waste tax before deadline" identifier="WasteTax" />
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="WasteFee" Title="Waste Tax" Description="Pay Waste tax before deadline" identifier="WasteTax" />
                 
                 
               
 
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Czech Bank-account" Description="Open czech account to receive scholarship (Free money)" identifier="bank"/>
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Czech Bank-account" Description="Open czech account to receive scholarship (Free money)" identifier="bank"/>
 
                 
 
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Get crack" identifier="GetCrack"/>
+                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Get crack" identifier="GetCrack"/>
             </ScrollView>
         )
     }

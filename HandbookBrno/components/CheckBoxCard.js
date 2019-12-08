@@ -24,11 +24,16 @@ const CheckBoxCard = ({Title, Color, Navigate, GuideID, Description,identifier})
               <View style={NavColor(Color)}>
                   
                   <View style={styles.Description}>
-                    <Text style={styles.Title}>{Title}</Text>
-                    <Text>
-                      {Description}
-                    </Text>
+                    <TouchableHighlight underlayColor="white" activeOpacity={0.5} onPress={()=>{Navigate(GuideID)}}>
+                      <View>
+                        <Text style={styles.Title}>{Title}</Text>
+                        <Text>
+                          {Description}
+                        </Text>
+                      </View>
+                    </TouchableHighlight>
                   </View>
+
                   
                 
                   <Todo_Button text="Mark as complete"
