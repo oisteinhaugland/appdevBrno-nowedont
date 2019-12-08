@@ -111,16 +111,15 @@ const styles = StyleSheet.create({
   },
 
   Header:{
-    fontSize:font_styles.header_size,
-    fontWeight: font_styles.header_weight,
+    fontSize:font_styles.guide_header_size,
+    fontWeight: font_styles.guide_header_weight,
     marginBottom:5,
-    
   },
   
   BodyText:{
-    fontSize:font_styles.text_size,
-    fontWeight: font_styles.text_weight,
-    lineHeight:40,
+    fontSize:font_styles.guide_text_size,
+    fontWeight: font_styles.guide_text_weight,
+    lineHeight:font_styles.guide_text_lineheight,
   },
 
   text_view:{

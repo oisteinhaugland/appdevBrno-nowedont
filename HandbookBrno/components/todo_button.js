@@ -71,7 +71,6 @@ class Todo_button extends React.Component {
   }
 
   onPress = () => {
-    console.log(this.state);
     if(this.state.completed == 'false'){
       
         this.setState({  
@@ -128,13 +127,6 @@ render(){
   }
 }
 
-
-/*
-const mark_as_complete = () {
-
-} 
-
-*/
 const colors = {
   pink:"#E73479",
   orange: "#FFA339",
@@ -142,7 +134,6 @@ const colors = {
 
   dark_green:"#0AC25A",
   dark_orange:"#FF8F0D",
-  
 }
 
 const styles = StyleSheet.create({

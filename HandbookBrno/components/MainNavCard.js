@@ -59,8 +59,8 @@ const styles = StyleSheet.create({
 
     },
     Title:{
-        fontSize:font_styles.header_size,
-        fontWeight:font_styles.header_weight,
+        fontSize:font_styles.home_header_size,
+        fontWeight:font_styles.home_header_weight,
         marginBottom: 2,
     },
     flex_spacing:{
@@ -68,8 +68,8 @@ const styles = StyleSheet.create({
   
   },
     text:{
-      fontSize:font_styles.text_size,
-      fontWeight:font_styles.text_weight
+      fontSize:font_styles.home_text_size,
+      fontWeight:font_styles.home_text_weight
     },
 
     fa_icon_container:{

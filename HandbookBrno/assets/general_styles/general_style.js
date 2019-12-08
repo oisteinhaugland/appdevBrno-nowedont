@@ -69,6 +69,45 @@ const color_scheme = {
 
 const font_styles = {
 
+  /*********************************
+    // Home screen
+  **********************************/
+ 
+    //header
+      home_header_size:22,
+      home_header_weight:'400',
+  
+    //text
+      home_text_size:16,
+      home_text_weight:'300',
+
+
+  /*********************************
+    // Todo List Screen
+  **********************************/
+
+    //header
+      todo_header_size:22,
+      todo_header_weight:'400',
+      
+    //text
+      todo_text_size:16,
+      todo_text_weight:'300',
+      
+
+  /*********************************
+    // Guide views
+  **********************************/
+    
+    //header
+      guide_header_size:22,
+      guide_header_weight:'400',
+
+    //text
+      guide_text_size:16,
+      guide_text_weight:'300',
+      guide_text_lineheight:30,
+/*
   text_size:20,
   header_size:24,
   title_size:30,
@@ -80,6 +119,7 @@ const font_styles = {
   text_line_height:1,
   header_line_height:1,
   title_line_height:1,
+*/
 
 }
 

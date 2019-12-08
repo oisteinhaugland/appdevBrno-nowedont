@@ -7,6 +7,7 @@ import OtherCategories from '../components/OtherCategories';
 import {StyleSheet} from 'react-native';
 import Horizontal_spacer from '../components/Horizontal_spacer';
 import {font_styles,color_scheme} from '../assets/general_styles/general_style.js';
+import { AsyncStorage } from 'react-native';
 
 
 
@@ -35,6 +36,23 @@ class HomeScreen extends React.Component {
         //  fontSize:font_styles.title_size
         },
     }
+
+    returnIconColor(){
+      if (true){
+          return color_scheme.color_green_0;
+        } else {
+          return color_scheme.color_red_0;
+      }
+    }
+
+  returnIcon(){
+    if (true){
+        return "md-checkmark";
+      } else {
+        return "md-alert";
+      }
+    }
+  
     render(){
         return (
             <ScrollView style={styles.container}>
@@ -44,9 +62,9 @@ class HomeScreen extends React.Component {
                 {/*<Header/> commented out because react-navigation has its own header
                 Also the huge amount of MainNavCards its just for now just to see how it looks
                 <OtherCategories/>*/}
-                <MainNavCard Navigate={this.NavigateToCheckBox} Title="Start Here - Essential To Do List" Description="Important things to remember to do upon arrival"
-                iconName="md-alert"
-                iconColor={color_scheme.color_red_0}
+                <MainNavCard Navigate={this.NavigateToCheckBox} Title="Essential To Do List" Description="Remember to do these things after arrival!"
+                iconName={this.returnIcon()}
+                iconColor={this.returnIconColor()}
                 //FF6239
                 //#f39c12
                 />  
@@ -74,10 +92,7 @@ class HomeScreen extends React.Component {
                 iconColor={color_scheme.color_blue_2}
                 iconName="md-call" />    
 
-                
-             
 
-                
                 
             </ScrollView>
         );

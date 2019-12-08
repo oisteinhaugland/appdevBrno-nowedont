@@ -71,14 +71,14 @@ const styles = StyleSheet.create({
   },
 
     Title:{
-        fontSize:font_styles.header_size,
-        fontWeight:font_styles.header_weight,
+        fontSize:font_styles.todo_header_size,
+        fontWeight:font_styles.todo_header_weight,
         marginBottom: 2,
     },
     Text:{
 
-      fontSize:font_styles.text_size,
-      fontWeight:font_styles.text_weight,
+      fontSize:font_styles.todo_text_size,
+      fontWeight:font_styles.todo_text_weight,
     }
 
   });
