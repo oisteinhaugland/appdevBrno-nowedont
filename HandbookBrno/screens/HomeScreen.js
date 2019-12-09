@@ -120,8 +120,15 @@ class HomeScreen extends React.Component {
 
                 <MainNavCard Navigate={this.NavigateToGuide} GuideID="Emergency" Title="Emergency Contacts" Description="See the contacts for emergencies"
                 iconColor={color_scheme.color_blue_2}
-                iconName="md-call" />    
+                iconName="md-call" />  
+                
+                <MainNavCard Navigate={this.NavigateToGuide} GuideID="Landmarks" Title="Landmarks" Description="Places to visit in Brno"
+                iconColor={color_scheme.color_blue_2}
+                iconName="md-map" />   
 
+                <MainNavCard Navigate={this.NavigateToGuide} GuideID="UniversityInfo" Title="University Info" Description="General university information"
+                iconColor={color_scheme.color_blue_2}
+                iconName="md-school" /> 
 
                 
             </ScrollView>
