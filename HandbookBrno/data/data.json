@@ -11,6 +11,7 @@
                   {"Text":"Public transport in Brno is great. Trams and busses leave often, there is little waiting and it is pretty cheap. You can buy single, monthly, quarterly or yearly tickets. The company who runs the transport is DPMB.", "id":"1"},
                   
                   {"Text":"Guide contents:", "id":"2"},
+                  {"LinkToHeader":"This is gonna be the first link", "header":"Long term tickets", "id":"5"},
                   {"Text":"Long-term tickets \nShort-term tickets \nPrices", "id":"3"}
                 
                   
