@@ -57,7 +57,7 @@ class Todo_button extends React.Component {
 
       }).then(()=>{
       this.completed_text = "Completed "
-      this.not_completed_text = "Mark as complete"
+      this.not_completed_text = "Mark as done"
       
       if(this.state.completed == 'true'){
         this.SetCompletedStyles();
@@ -71,7 +71,6 @@ class Todo_button extends React.Component {
   }
 
   onPress = () => {
-    console.log(this.state);
     if(this.state.completed == 'false'){
       
         this.setState({  
@@ -96,7 +95,8 @@ class Todo_button extends React.Component {
   SetNotCompletedStyles = () => {
     this.style = styles.button_style;
     this.text = this.not_completed_text
-    this.underlayColor = "#f39c12"
+    this.underlayColor = colors.dark_orange
+
   }
 
   SetCompletedStyles = () => {
@@ -106,7 +106,7 @@ class Todo_button extends React.Component {
       {this.completed_text}
       <Ionicons name="md-checkmark"/>
     </Text>
-    this.underlayColor = "green"
+    this.underlayColor = colors.dark_green
   }
   
 render(){
@@ -115,6 +115,7 @@ render(){
                 style={this.style}
                 underlayColor={this.underlayColor}
                 onPress={this.onPress} 
+                
               >
                     <Text>
                       {this.text}
@@ -126,13 +127,14 @@ render(){
   }
 }
 
+const colors = {
+  pink:"#E73479",
+  orange: "#FFA339",
+  green: "#2ecc71",
 
-/*
-const mark_as_complete = () {
-
-} 
-
-*/
+  dark_green:"#0AC25A",
+  dark_orange:"#FF8F0D",
+}
 
 const styles = StyleSheet.create({
     button_style: {
@@ -144,7 +146,7 @@ const styles = StyleSheet.create({
       justifyContent:"center",
       alignSelf:'center',
       borderRadius:2,
-      backgroundColor:"#f39c12",
+      backgroundColor:colors.orange, //orange
       flex:3,
       shadowColor: "#000",
       shadowOffset: {
@@ -166,7 +168,7 @@ const styles = StyleSheet.create({
       justifyContent:"center",
       alignSelf:'center',
       borderRadius:2,
-      backgroundColor:"#2ecc71",
+      backgroundColor:colors.green, // green
       flex:3,
       shadowColor: "#000",
       shadowOffset: {

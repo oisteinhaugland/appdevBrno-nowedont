@@ -5,6 +5,8 @@ import * as data from '../data/data.json';
 
 import {images} from '../data/Images.js';
 
+import {font_styles,color_scheme} from '../assets/general_styles/general_style.js';
+
 export default class GuideDetailsScreen extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
@@ -38,7 +40,7 @@ export default class GuideDetailsScreen extends Component {
         renderItem={({ item }) => {
           if(item.Text != null){
             //Normal body text style it here !!!!
-            return <Text style={styles.BodyText}>{item.Text}</Text>
+            return <View style={styles.text_view}><Text style={styles.BodyText}>{item.Text}</Text></View>
           }
           if(item.ImageName !=null){
             for(let i =0; i< images.length;i++){
@@ -84,21 +86,44 @@ const styles = StyleSheet.create({
   Title: {
       alignSelf:"center",
   },
-  TitleText:{
-    fontSize:40,
-  },
   BodyBlock:{
-    padding:15,
-    marginLeft:5,
-  },
-  Header:{
-    fontSize:30,
-    marginBottom:5,
+    backgroundColor:"#fefefe",
+    marginHorizontal:22.5,
+    marginVertical:10,
+    paddingHorizontal:22.5,
+    paddingVertical:15,
+    marginBottom:30,
+    //borderWidth:0.5,
     
+    borderStyle:'solid',
+    borderColor:"#333",
+
+    
+       //drop shadow
+       shadowColor: "#000",
+       shadowOffset: {
+         width: 0,
+         height: 5,
+       },
+       shadowOpacity: 0.3,
+       shadowRadius: 3.84,
+       elevation: 5
   },
+
+  Header:{
+    fontSize:font_styles.guide_header_size,
+    fontWeight: font_styles.guide_header_weight,
+    marginBottom:5,
+  },
+  
   BodyText:{
-    fontSize:20,
-    lineHeight:40,
+    fontSize:font_styles.guide_text_size,
+    fontWeight: font_styles.guide_text_weight,
+    lineHeight:font_styles.guide_text_lineheight,
+  },
+
+  text_view:{
+    marginBottom:20,   
   }
 
 });
