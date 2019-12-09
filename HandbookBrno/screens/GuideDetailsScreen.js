@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {View, ScrollView, Text, FlatList, StyleSheet, Image, Linking} from 'react-native';
+import {View, ScrollView, Text, FlatList, StyleSheet, Image, Linking, TouchableHighlight} from 'react-native';
 
 import * as data from '../data/data.json';
 
@@ -58,6 +58,11 @@ export default class GuideDetailsScreen extends Component {
                     {item.LinkText}
                    </Text>
           }
+          if(item.LinkToHeader !=null){
+            //Style the Link to header here !!!!!
+            //You add it like this in the data.json {"LinkToHeader":"This is gonna be the first link", "header":"Long term tickets", "id":"5"},
+            return <TouchableHighlight underlayColor="white" onPress={() => {this.GotoItemByHeader(item.header)}}><Text>{item.LinkToHeader}</Text></TouchableHighlight>
+          }
           //console.log(item);
         }}
         keyExtractor={item => item.id}
@@ -65,18 +70,30 @@ export default class GuideDetailsScreen extends Component {
       </View>
     );
   }
+  GotoItemByHeader = (header) =>{
+    let theItemWeNeed;
+    this.state.GuideData.ContentArray.forEach(element => {
+      if(element.header == header){
+        theItemWeNeed = element;
+      }
+    });
+    //if you want to change the scrolling by index use this
+    //this.flatListRef.scrollToIndex({animated: true, index:1});
+    this.flatListRef.scrollToItem({animated: true, item:theItemWeNeed});
 
+  }
   render() {
     return (
       <View>
-      <ScrollView>
+      
         {/*<View style={styles.Title}><Text style={styles.TitleText}>{this.state.GuideData.Title}</Text></View>*/}
         <FlatList
         data={this.state.GuideData.ContentArray}
+        ref={(ref) => { this.flatListRef = ref; }}
         renderItem={({ item }) => <this.renderParagraph header={item.header} body={item.body} />}
         keyExtractor={item => item.header}
       />
-      </ScrollView>
+      
       
       </View>
     )
