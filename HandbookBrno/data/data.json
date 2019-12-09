@@ -3,31 +3,25 @@
         {"TramCard":{
             "Title":"Public transport",
             "ContentArray":[
+              
               {
                 "header":"About",
                 "body":[
                     
-                  {"Text":"Public transport in Brno is pretty great.", "id":"1"},
-                    
-                  {"Text":"Busses and Trams leave very often, so there is little waiting. There are night busses", "id":"2"},
-                    
-                  {"Text":"","id":"3"},
-                    
-                  {"Text": "","id":"4"},
-
-                  {"Text":"","id":"5"}
+                  {"Text":"Public transport in Brno is great. Trams and busses leave often, there is little waiting and it is pretty cheap. You can buy single, monthly, quarterly or yearly tickets. The company who runs the transport is DPMB.", "id":"1"},
+                  
+                  {"Text":"Guide contents:", "id":"2"},
+                  {"Text":"Long-term tickets \nShort-term tickets \nPrices", "id":"3"}
+                
+                  
                 ]
             },
-
-
 
                 {
                     "header":"Long term tickets",
                     "body":[
-                        
-                      {"Text":"If you are a student under 26, you are entitled to a reduced student-rate pass for two zones (100 and 101) which is the most practical. ", "id":"1"},
-                        
-                      {"Text":"To get your Public transport ticket you have two options: \n•   Physical transport pass \n•   Electronic transport pass", "id":"2"},
+                          
+                      {"Text":"To get your long term public transport ticket you have two options: \n•   Physical transport pass \n•   Electronic transport pass", "id":"2"},
                         
                       {"Text":"We recommend getting the Electronic pass. All you need is a contactless bank card (it will be your ticket carrier) and a card with authorised online international payments to pay for the ticket. ","id":"3"},
                         
@@ -52,7 +46,22 @@
 
                         {"Text":"Or, buy SMS tickets by texting 90206, but it is only possible with a Czech SIM card (make sure the “Premium SMS” service is activated with your mobile provider). You have to wait for the confirmation SMS (approximately 2 minutes) before you board the vehicle.\n•  “BRNO20” 20 minutes ticket for 20 CZK\n•  “BRNO” 75 minutes ticket for 29 CZK\n•  “BRNOD” 24 hours ticket for 99 CZK", "id":"6"}                 
                     ]
-                }
+                },
+
+                {
+                  "header":"Prices",
+                  "body":[
+                        
+                    
+                    {"Text":"Students under 26 years can get discounts on long term tickets. Zone 100 and 101 is usually enough.", "id":"1"},
+
+                    {"Text":"Single-use. zones(2) (15min): 20 czk \nSingle-use. Zones(2) (60min): 25 czk\nSingle-use. Zones(3) (90min): 27 czk", "id":"2"},
+
+                    {"Text":"1 Month. Zone(100/101) (Student): 275 czk\n3 Months. Zone(100/101) (Student): 685 czk\n1 Year. Zone(100/101) (Student): 2 375 czk", "id":"3"},
+                    
+                    {"Text":"1 Month. Zone(100/101) (Adult): 550 czk\n3 Month. Zones(100/101) (Adult): 1370 czk\n1 Year. Zones(100/101) (Adult): 4 750 czk", "id":"4"}                                
+                  ]
+              }
             ]
             },
             "WasteFee":{
@@ -61,19 +70,50 @@
                 {
                     "header":"Paying the waste fee.",
                     "body":[
-                        {"Text":"All foreign nationals living temporarily in Brno, longer than 3 months, is obligated to pay a local waste fee. The basic fee is around 670 czk for a calendar year, though the sum might change per year. You don’t have to pay the full amount, only for the period of time you live in Brno.\nIt can be paid in 2 ways:\n\n-	Digitally (recommended)\n-	In person", "id":"1"}
+                        {"Text":"All foreign nationals living temporarily in Brno, longer than 3 months, is obligated to pay a waste fee.", "id":"1"},
+
+                        {"Text":"The deadline is 30(!) days after arrival.","id":"3"},
+                        
+                        {"Text":"The basic fee is around 670 czk for a calendar year, though the sum might change per year. You don’t have to pay the full amount, only for the period of time you live in Brno.","id":"2"},
+
+                        {"Text":"It can be paid in 2 ways:\n\tDigitally (recommended)\n\tIn person","id":"4"}
                     ]
                     },
                 {
                     "header":"How to pay digitally: BrnoID",
                     "body":[
-                        {"Text":"The easiest way is to pay through BrnoID.cz. It is a digital platform that helps citizens of Brno use city services online. It’s great, use it.\n\nThis link will take you directly to the payment form. You have to register a basic BrnoID account, which only requires an email and a password.\n\n! – Filling in your arrival date and estimated departure in the form will calculate how much you have to pay.\n\n\n\nThe form should be self-explanatory, but you have to figure out your address and post code. \n\nThis website can help you out:\n\nhttps://worldpostalcode.com/czech-republic/brno-mesto\n\nThere is a search by map function at the bottom \n\n", "id":"1"}
+                        {"Text":"The easiest way is to pay through BrnoID.cz. It is a digital platform that helps citizens of Brno use city services online. It’s great, use it.", "id":"1"},
+
+                        {"Text":"This link will take you directly to the payment form. You have to register a basic BrnoID account, which only requires an email and a password.","id":"2"},
+                        
+                        {"LinkText":"Pay for waste fee now", "Link":"https://www.brnoid.cz/en/pay-for-waste", "id":"3"},
+                        
+                        {"Text":"Filling in your arrival date and estimated departure in the form will calculate how much you have to pay.","id":"4"},
+                        
+                        {"Text":"The form should be self-explanatory, but you have to figure out your address and post code.","id":"5"},
+                        
+                        {"Text":"This website with a 'search by map function' at the bottom can help you find it:","id":"6"},
+                        
+                        {"LinkText":"Worldpostalcode/czech", "Link":"https://worldpostalcode.com/czech-republic/brno-mesto", "id":"7"}
+                        
+
                     ]
                 },
                 {
                     "header":"How to pay in Person: Šumavská 35C, 3th floor",
                     "body":[
-                        {"Text":"If for some reason you can’t do your payments online, it can be done in person. Go to this address: Šumavská 35C, 3th floor. \n\nDirections: The closest tram/busstops are Klusáčkova and Tábor. It is a 4-minute walk from each stop. 350-400meters.\n\nTo Klusáčkova by:\n\n-	Tram: #12 (easiest)\n\n-	Buss: #34, #36 #68,\n\nTo Tábor by:\n\n-	Tram: #3, #11 \n\n-	Buss:  #68\n\nWhen making a payment in cash at the cash desk you need to know the name and surname, address and date of birth for each of the fee payers that you are making payment for.\n\nCash desk opening hours:\n\n\n\nMon. and Weds.: 8:00 – 17:00\n\nTues.:                   8:00 – 12:00 and 13:00 – 14:30\n\nThurs.:                 8:00 – 12:00 and 13:00 – 14:00\n\nFri.:                       8:00 – 12:00\n\n", "id":"1"}
+                        {"Text":"If for some reason you can’t do your payments online, it can be done in person. Go to this address: Šumavská 35C, 3th floor.", "id":"1"},
+
+                        {"Text":"Directions: The closest tram/busstops are Klusáčkova and Tábor. It is a 4-minute walk from each stop. 350-400meters.","id":"2"},
+                       
+                        {"Text":"To Klusáčkova by:\n\tTram: #12 (easiest)\n\tBuss: #34, #36 #68","id":"3"},
+
+                        {"Text":"To Tábor by:\n\tTram: #3, #11 \n\tBuss:  #68","id":"4"},
+
+                        {"Text":"When making a payment in cash at the cash desk you need to know the name and surname, address and date of birth for each of the fee payers that you are making payment for.","id":"5"},
+
+                        {"Text":"Cash desk opening hours:\n\tMon/Weds: 8:00 – 17:00\n\tTue:8:00 – 12:00 and 13:00 – 14:30\n\tThurs:8:00 – 12:00 and 13:00 – 14:00\n\tFri:8:00 – 12:00","id":"6"}
+                      
                     ]
                 }
             ]
@@ -130,28 +170,6 @@
                             {"ImageName":"ForeignPoliceMap","Width":100,"Height":100, "id":"3"},
                             {"Text":"Text3", "id":"4"},
                             {"LinkText":"Link", "Link":"http://google.com", "id":"5"}
-                        ]
-                    }
-                ]
-            },
-            "LearningAgreement":{
-                "Title":"Learning agreement guide",
-                "ContentArray":[
-                    {
-                        "header":"Here is the guide",
-                        "body":[
-                            {"Text":"This is how to do it", "id":"1"}
-                        ]
-                    }
-                ]
-            },
-            "404":{
-                "Title":"Error 404",
-                "ContentArray":[
-                    {
-                        "header":"Guide is not implemented !Yet! ;)",
-                        "body":[
-                            {"Text":"", "id":"1"}
                         ]
                     }
                 ]
