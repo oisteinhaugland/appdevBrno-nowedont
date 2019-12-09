@@ -68,22 +68,19 @@ class HomeScreen extends React.Component {
       }
     }
     componentDidMount(){
-      /*let checkBoxCount;
+      let checkBoxCount;
       let completedTaskCount;
       this._retrieveData("CheckboxCount").then((k)=>{
         checkBoxCount = parseInt(k);
         this._retrieveData("completedTaskCount").then((b) =>{
           completedTaskCount = parseInt(b);
-          //console.log(checkBoxCount);
-          //console.log(completedTaskCount);
-          //console.log(checkBoxCount === completedTaskCount);
-          if (checkBoxCount === completedTaskCount){
-            return color_scheme.color_green_0;
-          } else {
-            return color_scheme.color_red_0;
+          if (checkBoxCount <= completedTaskCount){
+            this.setIconColour(true);
+            this.setIconName(true);
           }
+          
         })
-      })*/
+      })
     }
   
     render(){
