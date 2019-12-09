@@ -262,6 +262,14 @@
                         ]
                     }
                 ]
+            },
+            "404":{
+                "Title":"Guide not found",
+                "ContentArray":[
+                    {
+                        "header":"This guide is not implemented yet."
+                    }
+                ]
             }
 
         }

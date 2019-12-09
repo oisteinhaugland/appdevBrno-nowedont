@@ -25,7 +25,7 @@ const CheckBoxCard = ({Title, Color, Navigate, GuideID, Description,identifier, 
               <View style={NavColor(Color)}>
                   
                   <View style={styles.Description}>
-                    <TouchableHighlight underlayColor="white" activeOpacity={0.5} onPress={()=>{Navigate(GuideID)}}>
+                    <TouchableHighlight underlayColor="white" activeOpacity={0.5} onPress={()=>{Navigate(GuideID, Title)}}>
                       <View>
                         <Text style={styles.Title}>{Title}</Text>
                         <Text style={styles.Text}>

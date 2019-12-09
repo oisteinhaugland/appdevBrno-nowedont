@@ -21,8 +21,8 @@ class HomeScreen extends React.Component {
     /*This is how we navigate to other components, if you're unsure what is routeName check navigation/CoursesNavigation.js
     Also props.navigation methods are only passed down to components specified in Navigator file so if you want to use them in
     sub components you have to do it like i did it here with passing down a function, not sure if there is another way */
-    NavigateToGuide = (guideID) =>{
-        this.props.navigation.navigate('GuideDetails', { ID : guideID});
+    NavigateToGuide = (guideID, HeaderTitle) =>{
+        this.props.navigation.navigate('GuideDetails', { ID : guideID, HeaderTitle:HeaderTitle});
     }
     /*Navigation to survival guide */
     NavigateToCheckBox = () =>{
