@@ -10,7 +10,7 @@ import {font_styles,color_scheme} from '../assets/general_styles/general_style.j
 export default class GuideDetailsScreen extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
-      title: navigation.getParam('Title', ''),
+      title: navigation.getParam('HeaderTitle', ''),
     };
   };
   
@@ -23,10 +23,7 @@ export default class GuideDetailsScreen extends Component {
    // console.log(data["guides"][this.props.navigation.getParam('ID', 'NO-ID')]);
   }
   componentWillMount(){
-    
-    this.props.navigation.setParams({
-      Title: this.state.GuideData.Title
-    });
+
 
   }
 
