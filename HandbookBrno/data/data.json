@@ -123,9 +123,16 @@
                 "Title":"Emergency Contacts",
                 "ContentArray":[
                     {
-                        "header":"Contacts:",
+                        "header":"Emerency contacts:",
                         "body":[
-                            {"Text":"-Call 112 – General Emergency\n- Call 155 – Medical Emergency\n- Call 150 – Fire Department\n- Call 158 – Police\nInfo:\n122 is the general emergency number in the European Union. It should be used in case of serious emergencies only. As well as their native Czech, the operators also speak English and German. The number is free of charge. Whether the call is made from a fixed line or from a\ncell phone, the caller can be located precisely, and a response team dispatched instantly. The number can be used to reach the police, the fire department or emergency medical assistance.", "id":"1"}
+                            {"Text":"\n\t112 – General Emergency", "id":"1"},
+                            {"Text":"\t155 – Medical Emergency","id":"2"},
+                            {"Text":"\t150 – Fire Department","id":"3"},
+                            {"Text":"\t158 – Police","id":"4"},
+
+                            {"Text":"Info:\n112 is the general emergency number in the European Union. It should be used in case of serious emergencies only. As well as their native Czech, the operators also speak English and German. The number is free of charge.","id":"5"},
+                            
+                            {"Text":"Whether the call is made from a fixed line or from a cell phone, the caller can be located precisely, and a response team dispatched instantly. The number can be used to reach the police, the fire department or emergency medical assistance.","id":"6"}
                         ]
                     }
                 ]
