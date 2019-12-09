@@ -70,6 +70,47 @@ class Todo_button extends React.Component {
   
   }
 
+  increaseCompletedTaskCount(){
+    let completedTaskCount;
+    this._retrieveData("completedTaskCount").then((value)=>{
+      if(value == null){
+        value = "0";
+      }
+      completedTaskCount = parseInt(value);
+      completedTaskCount++;
+      completedTaskCount = completedTaskCount.toString();
+      this._storeData("completedTaskCount", completedTaskCount).then(()=>{
+        this._retrieveData("CheckboxCount").then((k)=>{
+          if( completedTaskCount == parseInt(k)){
+            this.props.setIconColour(true);
+            this.props.setIconName(true);
+          }
+        });
+
+      });
+    });
+  }
+  decreaseCompletedTaskCount(){
+    let completedTaskCount;
+    this._retrieveData("completedTaskCount").then((value)=>{
+      if(value == null){
+        value = "0";
+      }
+      completedTaskCount = parseInt(value);
+      if(completedTaskCount != 0) {completedTaskCount--;}
+      completedTaskCount = completedTaskCount.toString();
+      this._storeData("completedTaskCount", completedTaskCount).then(()=>{
+        this._retrieveData("CheckboxCount").then((k)=>{
+          if( completedTaskCount < parseInt(k)){
+            this.props.setIconColour(false);
+            this.props.setIconName(false);
+          }
+        });
+
+      });
+    })
+  }
+
   onPress = () => {
     if(this.state.completed == 'false'){
       
@@ -77,7 +118,11 @@ class Todo_button extends React.Component {
           completed: 'true'  
         })
         this._storeData(this.props.identifier, 'true');
+
         this.SetCompletedStyles();
+
+        
+        this.increaseCompletedTaskCount();
 
 
     }  else {
@@ -86,7 +131,11 @@ class Todo_button extends React.Component {
           completed: 'false'  
         })
         this._storeData(this.props.identifier, 'false');
+
+
         this.SetNotCompletedStyles();  
+
+        this.decreaseCompletedTaskCount();
 
     }  
   }

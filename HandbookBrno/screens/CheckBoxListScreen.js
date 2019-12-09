@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {View, ScrollView, FlatList} from 'react-native'
 import CheckBoxCard from '../components/CheckBoxCard';
 import Horizontal_spacer from '../components/Horizontal_spacer';
+import { AsyncStorage } from 'react-native';
 
 export default class CheckBoxListScreen extends Component {
     static navigationOptions = {
@@ -40,27 +41,28 @@ export default class CheckBoxListScreen extends Component {
         }
       };
     RenderCheckBoxCards(){
+        const { params} = this.props.navigation.state;
         let CheckBoxCards = [
             <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="LearningAgreement" Title="Learning Agreement" Description="Get learning agreement signed at your faculty"  
-            identifier="Learning"/>,
+            identifier="Learning" setIconColour={params.setIconColour} setIconName={params.setIconName}/>,
             <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" 
-            Title="Accomodation office" Description="Get documents signed" identifier="WasteFee" />,
+            Title="Accomodation office" Description="Get documents signed" identifier="WasteFee" setIconColour={params.setIconColour} setIconName={params.setIconName}/>,
             <CheckBoxCard Navigate={this.NavigateToGuide} 
             GuideID="TramCard" 
             Title="Public transport" 
             Description ="Aquire a tram/buss card"
             identifier="PublicTransport"
+            setIconColour={params.setIconColour} setIconName={params.setIconName}
             />,
             <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="WasteFee" Title="Waste Tax" 
-            Description="Pay Waste tax before deadline" identifier="WasteTax" />,
+            Description="Pay Waste tax before deadline" identifier="WasteTax" setIconColour={params.setIconColour} setIconName={params.setIconName}/>,
             <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Czech Bank-account" 
-            Description="Open czech account to receive scholarship (Free money)" identifier="bank"/>,
-            <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Get crack" identifier="GetCrack"/>
+            Description="Open czech account to receive scholarship (Free money)" identifier="bank" setIconColour={params.setIconColour} setIconName={params.setIconName}/>,
+            <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Get crack" identifier="GetCrack" setIconColour={params.setIconColour} setIconName={params.setIconName}/>
 
         ]
-        this._storeData("CheckboxCount", CheckBoxCards.length).then(()=>{
-            this._retrieveData("CheckboxCount").then(k=>console.log(k));
-        });
+        this._storeData("CheckboxCount", CheckBoxCards.length.toString());
+
 
         return CheckBoxCards;
     }
@@ -68,11 +70,11 @@ export default class CheckBoxListScreen extends Component {
     render() {
         return (
             <ScrollView>
-      <FlatList
-        data={this.RenderCheckBoxCards()}
-        renderItem={({ item }) => item}
-        keyExtractor={item => item.props.identifier}
-      />
+                <FlatList
+                    data={this.RenderCheckBoxCards()}
+                    renderItem={({ item }) => item}
+                    keyExtractor={item => item.props.identifier}
+                />
               
             </ScrollView>
         )

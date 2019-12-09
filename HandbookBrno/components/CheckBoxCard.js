@@ -4,7 +4,7 @@ import CustomText from '../components/CustomText';
 import Todo_Button from '../components/todo_button';
 import {font_styles,color_scheme} from '../assets/general_styles/general_style.js';
 
-const CheckBoxCard = ({Title, Color, Navigate, GuideID, Description,identifier}) => {
+const CheckBoxCard = ({Title, Color, Navigate, GuideID, Description,identifier, setIconColour, setIconName}) => {
     /*Just return the style for the NavCard with a specified Color in props
     no need to get into this, just know that its used to style the cards color */
     const NavColor = (color) =>{
@@ -37,7 +37,7 @@ const CheckBoxCard = ({Title, Color, Navigate, GuideID, Description,identifier})
 
                   
                 
-                  <Todo_Button 
+                  <Todo_Button setIconColour={setIconColour} setIconName={setIconName} 
                   identifier={identifier}></Todo_Button>
                   
               </View>

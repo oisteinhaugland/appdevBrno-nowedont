@@ -13,6 +13,11 @@ import { AsyncStorage } from 'react-native';
 
 class HomeScreen extends React.Component {
 
+  constructor(props) {
+    super(props)
+    this.state = { ToDoIconColour : color_scheme.color_red_0,
+                   ToDoIconName:"md-alert" }
+  }
     /*This is how we navigate to other components, if you're unsure what is routeName check navigation/CoursesNavigation.js
     Also props.navigation methods are only passed down to components specified in Navigator file so if you want to use them in
     sub components you have to do it like i did it here with passing down a function, not sure if there is another way */
@@ -21,7 +26,7 @@ class HomeScreen extends React.Component {
     }
     /*Navigation to survival guide */
     NavigateToCheckBox = () =>{
-        this.props.navigation.navigate({routeName: 'CheckBoxList'});
+        this.props.navigation.navigate('CheckBoxList',{setIconColour:this.setIconColour.bind(this), setIconName:this.setIconName.bind(this)});
     }
     /*This is the Header styles, since React-navigation create its own header we dont need a Header component anymore*/
     static navigationOptions = {
@@ -36,21 +41,49 @@ class HomeScreen extends React.Component {
         //  fontSize:font_styles.title_size
         },
     }
-
-    returnIconColor(){
-      if (true){
-          return color_scheme.color_green_0;
-        } else {
-          return color_scheme.color_red_0;
+    _retrieveData = async (itemName) => {
+      try {
+        const value = await AsyncStorage.getItem(itemName);
+        if (value !== null) {
+          // We have data!!
+          return value;
+        }
+      } catch (error) {
+        // Error retrieving data
+      }
+    };
+    setIconColour(bool){
+      if (bool){
+        this.setState({ToDoIconColour:color_scheme.color_green_0}) ;
+      } else {
+        this.setState({ToDoIconColour:color_scheme.color_red_0}) ;
       }
     }
 
-  returnIcon(){
-    if (true){
-        return "md-checkmark";
+  setIconName(bool){
+    if (bool){
+        this.setState({ToDoIconName:"md-checkmark"}) ;
       } else {
-        return "md-alert";
+        this.setState({ToDoIconName:"md-alert"}) ;
       }
+    }
+    componentDidMount(){
+      /*let checkBoxCount;
+      let completedTaskCount;
+      this._retrieveData("CheckboxCount").then((k)=>{
+        checkBoxCount = parseInt(k);
+        this._retrieveData("completedTaskCount").then((b) =>{
+          completedTaskCount = parseInt(b);
+          //console.log(checkBoxCount);
+          //console.log(completedTaskCount);
+          //console.log(checkBoxCount === completedTaskCount);
+          if (checkBoxCount === completedTaskCount){
+            return color_scheme.color_green_0;
+          } else {
+            return color_scheme.color_red_0;
+          }
+        })
+      })*/
     }
   
     render(){
@@ -63,8 +96,8 @@ class HomeScreen extends React.Component {
                 Also the huge amount of MainNavCards its just for now just to see how it looks
                 <OtherCategories/>*/}
                 <MainNavCard Navigate={this.NavigateToCheckBox} Title="Essential To Do List" Description="Remember to do these things after arrival!"
-                iconName={this.returnIcon()}
-                iconColor={this.returnIconColor()}
+                iconName={this.state.ToDoIconName}
+                iconColor={this.state.ToDoIconColour}
                 //FF6239
                 //#f39c12
                 />  
