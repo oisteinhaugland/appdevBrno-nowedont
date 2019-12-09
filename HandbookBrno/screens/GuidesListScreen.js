@@ -36,10 +36,10 @@ const styles = StyleSheet.create({
         
     },
     container: {
-        flex: 1,
-        backgroundColor: 'white',
-        alignItems: 'center',
-        justifyContent: 'center',
+      flex: 1,
+      backgroundColor: '#fefefe',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
   
   });

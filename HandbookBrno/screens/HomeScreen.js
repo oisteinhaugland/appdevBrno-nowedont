@@ -4,7 +4,12 @@ import Header from '../components/Header';
 import * as Font from 'expo-font';
 import MainNavCard from '../components/MainNavCard';
 import OtherCategories from '../components/OtherCategories';
-import Colors from '../styles/colors';
+import {StyleSheet} from 'react-native';
+import Horizontal_spacer from '../components/Horizontal_spacer';
+import {font_styles,color_scheme} from '../assets/general_styles/general_style.js';
+import { AsyncStorage } from 'react-native';
+
+
 
 class HomeScreen extends React.Component {
 
@@ -25,27 +30,71 @@ class HomeScreen extends React.Component {
          // backgroundColor: '#808080',
          // fontfamily:palatino,
         },
-        headerTintColor: '#333',
+        //headerTintColor: '#333',
         headerTitleStyle: {
-          fontWeight: 'normal',
+        //  fontWeight: font_styles.title_weigth,
+        //  fontSize:font_styles.title_size
         },
     }
-    render() {
+
+    returnIconColor(){
+      if (true){
+          return color_scheme.color_green_0;
+        } else {
+          return color_scheme.color_red_0;
+      }
+    }
+
+  returnIcon(){
+    if (true){
+        return "md-checkmark";
+      } else {
+        return "md-alert";
+      }
+    }
+  
+    render(){
         return (
             <ScrollView style={styles.container}>
 
-                <MainNavCard Navigate={this.NavigateToGuide} GuideID="TestNewStructure" Title="Testo" Description="For Students not living at the dorms"
-                iconName="md-close"  />    
+                
 
                 {/*<Header/> commented out because react-navigation has its own header
-                Also the huge amount of MainNavCards its just for now just to see how it looks*/}
-                <MainNavCard Navigate={this.NavigateToGuide} Title="Survival Guide" Description="Something, Something, Something, Something,..."/>
-                <OtherCategories/>
-                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#38B9D8"/>
-                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#81D2C7"/>
-                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#E0E0E2"/>    
-                <MainNavCard Navigate={this.NavigateToGuide} Title="Another Guide" Description="Something, Something, Something, Something,..." Color="#416788"/>    
-            </View>
+                Also the huge amount of MainNavCards its just for now just to see how it looks
+                <OtherCategories/>*/}
+                <MainNavCard Navigate={this.NavigateToCheckBox} Title="Essential To Do List" Description="Remember to do these things after arrival!"
+                iconName={this.returnIcon()}
+                iconColor={this.returnIconColor()}
+                //FF6239
+                //#f39c12
+                />  
+
+                <MainNavCard Navigate={this.NavigateToGuide} 
+                Title="Public Transport" 
+                Description="How to get tram / buss cards"
+                iconName="md-bus"
+                GuideID="TramCard"
+                iconColor={color_scheme.color_blue_2}
+                 />
+
+
+                <MainNavCard Navigate={this.NavigateToGuide} GuideID="WasteFee" Title="Waste Fee" Description="Required if you stay more than 3 months"
+                iconName="md-trash"
+                iconColor={color_scheme.color_blue_2}
+                />
+
+                
+                <MainNavCard Navigate={this.NavigateToGuide} GuideID="ForeignPolice" Title="Foreign Police" Description="For Students not living at the dorms"
+                iconColor={color_scheme.color_blue_2}
+                iconName="md-clipboard"  />  
+
+                <MainNavCard Navigate={this.NavigateToGuide} GuideID="Emergency" Title="Emergency Contacts" Description="See the contacts for emergencies"
+                iconColor={color_scheme.color_blue_2}
+                iconName="md-call" />    
+
+
+                
+            </ScrollView>
         );
     }
 
@@ -60,3 +109,11 @@ const styles = StyleSheet.create({
 });
 
 export default HomeScreen
+
+
+
+/*
+   <MainNavCard Navigate={this.NavigateToGuide} GuideID="TestNewStructure" Title="Testo" Description="For Students not living at the dorms"
+                iconName="md-close"  />    
+                
+*/
