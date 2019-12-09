@@ -81,7 +81,8 @@ class Todo_button extends React.Component {
       completedTaskCount = completedTaskCount.toString();
       this._storeData("completedTaskCount", completedTaskCount).then(()=>{
         this._retrieveData("CheckboxCount").then((k)=>{
-          if( completedTaskCount == parseInt(k)){
+          if(completedTaskCount > parseInt(k)) this._storeData("completedTaskCount",k);
+          if( completedTaskCount >= parseInt(k)){
             this.props.setIconColour(true);
             this.props.setIconName(true);
           }
@@ -101,6 +102,7 @@ class Todo_button extends React.Component {
       completedTaskCount = completedTaskCount.toString();
       this._storeData("completedTaskCount", completedTaskCount).then(()=>{
         this._retrieveData("CheckboxCount").then((k)=>{
+          if(completedTaskCount < 0) this._storeData("completedTaskCount",0);
           if( completedTaskCount < parseInt(k)){
             this.props.setIconColour(false);
             this.props.setIconName(false);

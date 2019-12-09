@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import {View, ScrollView, Text, FlatList, StyleSheet, Image, Linking, TouchableHighlight} from 'react-native';
+import {View, ScrollView, Text, FlatList, StyleSheet, Image, Linking, TouchableHighlight, Button} from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 import * as data from '../data/data.json';
 
@@ -11,6 +12,7 @@ export default class GuideDetailsScreen extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
       title: navigation.getParam('HeaderTitle', ''),
+      //headerRight: () =>{ return <TouchableHighlight onPress={() => {}} underlayColor="white"><Ionicons name="md-arrow-up" size={25} style={{marginHorizontal:20}} /></TouchableHighlight>}
     };
   };
   
@@ -22,10 +24,9 @@ export default class GuideDetailsScreen extends Component {
 
    // console.log(data["guides"][this.props.navigation.getParam('ID', 'NO-ID')]);
   }
-  componentWillMount(){
-
-
-  }
+  componentDidMount(){
+    this.props.navigation.setParams({headerRight: () => { return <TouchableHighlight onPress={() => {this.GoToStart()}} underlayColor="white"><Ionicons name="md-arrow-up" size={25} style={{marginHorizontal:20}} /></TouchableHighlight>}})
+    }
 
   renderParagraph = ({header, body}) =>{
     
@@ -78,6 +79,9 @@ export default class GuideDetailsScreen extends Component {
     //this.flatListRef.scrollToIndex({animated: true, index:1});
     this.flatListRef.scrollToItem({animated: true, item:theItemWeNeed});
 
+  }
+  GoToStart = () =>{
+    this.flatListRef.scrollToIndex({animated: true, index:0})
   }
   render() {
     return (

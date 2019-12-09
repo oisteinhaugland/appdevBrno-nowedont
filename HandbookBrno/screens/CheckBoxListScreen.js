@@ -23,7 +23,6 @@ export default class CheckBoxListScreen extends Component {
         this.props.navigation.navigate('GuideDetails', { ID : guideID, HeaderTitle:HeaderTitle});
     }
     componentDidMount(){
-
     }
     _storeData = async (itemName, itemValue) => {
         try {
@@ -60,9 +59,7 @@ export default class CheckBoxListScreen extends Component {
             <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="WasteFee" Title="Waste Tax" 
             Description="Pay Waste tax before deadline" identifier="WasteTax" setIconColour={params.setIconColour} setIconName={params.setIconName}/>,
             <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Czech Bank-account" 
-            Description="Open czech account to receive scholarship (Free money)" identifier="bank" setIconColour={params.setIconColour} setIconName={params.setIconName}/>,
-            <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Get crack" identifier="GetCrack" setIconColour={params.setIconColour} setIconName={params.setIconName}/>
-
+            Description="Open czech account to receive scholarship (Free money)" identifier="bank" setIconColour={params.setIconColour} setIconName={params.setIconName}/>
         ]
         this._storeData("CheckboxCount", CheckBoxCards.length.toString());
 
