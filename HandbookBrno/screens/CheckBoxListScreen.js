@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {View, ScrollView} from 'react-native'
+import {View, ScrollView, FlatList} from 'react-native'
 import CheckBoxCard from '../components/CheckBoxCard';
 import Horizontal_spacer from '../components/Horizontal_spacer';
 
@@ -18,39 +18,62 @@ export default class CheckBoxListScreen extends Component {
     NavigateToGuide = (guideID) =>{
         this.props.navigation.navigate('GuideDetails', { ID : guideID});
     }
+    componentDidMount(){
+
+    }
+    _storeData = async (itemName, itemValue) => {
+        try {
+          await AsyncStorage.setItem(itemName, itemValue);
+        } catch (error) {
+          // Error saving data
+        }
+      };
+      _retrieveData = async (itemName) => {
+        try {
+          const value = await AsyncStorage.getItem(itemName);
+          if (value !== null) {
+            // We have data!!
+            return value;
+          }
+        } catch (error) {
+          // Error retrieving data
+        }
+      };
+    RenderCheckBoxCards(){
+        let CheckBoxCards = [
+            <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="LearningAgreement" Title="Learning Agreement" Description="Get learning agreement signed at your faculty"  
+            identifier="Learning"/>,
+            <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" 
+            Title="Accomodation office" Description="Get documents signed" identifier="WasteFee" />,
+            <CheckBoxCard Navigate={this.NavigateToGuide} 
+            GuideID="TramCard" 
+            Title="Public transport" 
+            Description ="Aquire a tram/buss card"
+            identifier="PublicTransport"
+            />,
+            <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="WasteFee" Title="Waste Tax" 
+            Description="Pay Waste tax before deadline" identifier="WasteTax" />,
+            <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Czech Bank-account" 
+            Description="Open czech account to receive scholarship (Free money)" identifier="bank"/>,
+            <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Get crack" identifier="GetCrack"/>
+
+        ]
+        this._storeData("CheckboxCount", CheckBoxCards.length).then(()=>{
+            this._retrieveData("CheckboxCount").then(k=>console.log(k));
+        });
+
+        return CheckBoxCards;
+    }
 
     render() {
         return (
             <ScrollView>
-                
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="LearningAgreement" Title="Learning Agreement" Description="Get learning agreement signed at your faculty"  
-                identifier="Learning"/>
-
-                
-
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Accomodation office" Description="Get documents signed" identifier="WasteFee" />
-
-                
-
-                <CheckBoxCard Navigate={this.NavigateToGuide} 
-                GuideID="TramCard" 
-                Title="Public transport" 
-                Description ="Aquire a tram/buss card"
-                identifier="PublicTransport"
-                />
-
-                
-
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="WasteFee" Title="Waste Tax" Description="Pay Waste tax before deadline" identifier="WasteTax" />
-                
-                
+      <FlatList
+        data={this.RenderCheckBoxCards()}
+        renderItem={({ item }) => item}
+        keyExtractor={item => item.props.identifier}
+      />
               
-
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Czech Bank-account" Description="Open czech account to receive scholarship (Free money)" identifier="bank"/>
-
-                
-
-                <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Get crack" identifier="GetCrack"/>
             </ScrollView>
         )
     }
