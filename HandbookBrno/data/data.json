@@ -136,11 +136,17 @@
                     {
                         "header":"Are you an incoming student from any of the EU countries (or from Norway, Lichtenstein, Iceland, Switzerland)?",
                         "body":[
-                            {"Text":"YES: Do you stay in a dormitory owned by the university?\n YES: You don’t need to worry. The residence will take care about your registration.\n NO, staying in a private accommodation: You have to register at foreign police within 30 days after your arrival.\n\n NO: Do you have a long-term visa or long-term residence permit?\n VISA: Do you stay in a dormitory owned by the university?\n YES: You don’t need to worry. The residence will take care about your registration.\n NO, staying in a private accommodation: You have to register at foreign police within 3 working days after your arrival.\n\n RESIDENCE PERMIT: You need to register at Ministry of the Interior within 3 working days after your arrival.", "id":"1"}
+                            
+
+                            {"Text":"YES: Do you stay in a dormitory owned by the university?\n\tYES: You don’t need to worry. The residence will take care about your registration.\n\tNO: You have to register at foreign police within 30 days after your arrival.","id":"1"},
+
+                            {"Text":"NO: Do you have a long-term visa or long-term residence permit?\n\tVISA: Do you stay in a dormitory owned by the university?\n\t\tYES: You don’t need to worry. The residence will take care about your registration.\n\t\tNO: You have to register at foreign police within 3(!) working days after your arrival.","id":"3"},
+                            
+                            {"Text":"\tRESIDENCE PERMIT: You need to register at Ministry of the Interior within 3(!) working days after your arrival.", "id":"4"}                            
                         ]
                     },
                     {
-                        "header":"For students coming from the EU countries (+ Norway, Lichtenstein, Iceland, Switzerland) and students with long-term visa",
+                        "header":"Where to go for students coming from the EU countries (+ Norway, Lichtenstein, Iceland, Switzerland) and students with long-term visa",
                         "body":[
                             {"Text":"This is the address to remember:\nFOREIGN POLICE (Cizinecká policie)\nAddress: Cejl 62b, Brno\nTelephone: +420 974 628 131\nOffice hours:\nMonday and Wednesday:  8a.m. – 5p.m.\nTuesday and Thursday:      8a.m. – 2p.m.\nFriday:                                   none", "id":"1"}
                         ]
@@ -152,7 +158,7 @@
                         ]
                     },
                     {
-                        "header":"For students with long-term residence permit for the purposes of studies:",
+                        "header":"Where to go for students with long-term residence permit for the purposes of studies:",
                         "body":[
                             {"Text":"MINISTRY OF THE INTERIOR, Department for Asylum and Migration Policy\n(Ministerstvo vnitra, odbor azylové a migrační politiky)\nAddress: Hněvkovského 30/65, Brno\nTelephone: +420 543 213 313\nOffice hours:\nMonday and Wednesday:  8 a.m. – 5 p.m.\nTuesday and Thursday:      8 a.m. – 2 p.m.\nFriday:                                   none", "id":"1"}
                         ]
