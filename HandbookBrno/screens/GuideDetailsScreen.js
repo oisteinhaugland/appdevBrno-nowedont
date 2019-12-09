@@ -50,7 +50,7 @@ export default class GuideDetailsScreen extends Component {
           }
           if(item.LinkText !=null){
             //LINK styles here
-            return <Text style={{color: 'blue'}}
+            return <Text style={{textDecorationLine:'underline',fontSize: font_styles.guide_text_size,color: color_scheme.color_blue_4}}
                     onPress={() => Linking.openURL(item.Link)}>
                     {item.LinkText}
                    </Text>
@@ -58,7 +58,7 @@ export default class GuideDetailsScreen extends Component {
           if(item.LinkToHeader !=null){
             //Style the Link to header here !!!!!
             //You add it like this in the data.json {"LinkToHeader":"This is gonna be the first link", "header":"Long term tickets", "id":"5"},
-            return <TouchableHighlight underlayColor="white" onPress={() => {this.GotoItemByHeader(item.header)}}><Text>{item.LinkToHeader}</Text></TouchableHighlight>
+            return <TouchableHighlight underlayColor="white" onPress={() => {this.GotoItemByHeader(item.header)}}><Text style={{fontSize:16,fontWeight:'300',color:color_scheme.color_blue_4,textDecorationLine:'underline',paddingVertical:5}}>{item.LinkToHeader}</Text></TouchableHighlight>
           }
           //console.log(item);
         }}

@@ -8,12 +8,12 @@
                 "header":"About",
                 "body":[
                     
-                  {"Text":"Public transport in Brno is great. Trams and busses leave often, there is little waiting and it is pretty cheap. You can buy single, monthly, quarterly or yearly tickets. The company who runs the transport is DPMB.", "id":"1"},
-                  
-                  {"Text":"Guide contents:", "id":"2"},
-                  {"Text":"Long-term tickets \nShort-term tickets \nPrices", "id":"3"}
+                  {"Text":"Public transport in Brno is great. Trams and busses leave often, there is little waiting and it is pretty cheap. You can buy single, monthly, quarterly or yearly tickets. The company who runs the transport is DPMB. \nNavigation links:", "id":"1"},
                 
-                  
+                  {"LinkToHeader":"\t#Long term tickets","header":"Long term tickets","id":"4"}, 
+                  {"LinkToHeader":"\t#Single use tickets","header":"Single use tickets","id":"5"},                 
+                  {"LinkToHeader":"\t#Prices","header":"Prices","id":"6"},                 
+                                
                 ]
             },
 
@@ -88,7 +88,7 @@
                         
                         {"LinkText":"Pay for waste fee now", "Link":"https://www.brnoid.cz/en/pay-for-waste", "id":"3"},
                         
-                        {"Text":"Filling in your arrival date and estimated departure in the form will calculate how much you have to pay.","id":"4"},
+                        {"Text":"\nFilling in your arrival date and estimated departure in the form will calculate how much you have to pay.","id":"4"},
                         
                         {"Text":"The form should be self-explanatory, but you have to figure out your address and post code.","id":"5"},
                         
