@@ -15,13 +15,19 @@
                             "id": "2"
                         },
                         {
-                            "LinkToHeader": "This is gonna be the first link",
+                            "LinkToHeader": "Long term tickets",
                             "header": "Long term tickets",
-                            "id": "5"
+                            "id": "3"
                         },
                         {
-                            "Text": "Long-term tickets \nShort-term tickets \nPrices",
-                            "id": "3"
+                            "LinkToHeader": "Single use tickets",
+                            "header": "Single use tickets",
+                            "id": "4"
+                        },
+                        {
+                            "LinkToHeader": "Prices",
+                            "header": "Prices",
+                            "id": "5"
                         }
                     ]
                 },
@@ -72,6 +78,20 @@
                         {
                             "Text": "Or, buy SMS tickets by texting 90206, but it is only possible with a Czech SIM card (make sure the “Premium SMS” service is activated with your mobile provider). You have to wait for the confirmation SMS (approximately 2 minutes) before you board the vehicle.\n•  “BRNO20” 20 minutes ticket for 20 CZK\n•  “BRNO” 75 minutes ticket for 29 CZK\n•  “BRNOD” 24 hours ticket for 99 CZK",
                             "id": "6"
+                        }
+                    ]
+                },
+                {
+                    "header": "Prices",
+                    "body": [
+                        {
+                            "Text": "Here is the link for all tickets prices.",
+                            "id": "1"
+                        },
+                        {
+                            "LinkText": "https://www.idsjmk.cz/cenik/CenikEN.pdf",
+                            "Link": "https://www.idsjmk.cz/cenik/CenikEN.pdf",
+                            "id": "2"
                         }
                     ]
                 }

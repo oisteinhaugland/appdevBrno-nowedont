@@ -59,7 +59,9 @@ export default class GuideDetailsScreen extends Component {
           if(item.LinkToHeader !=null){
             //Style the Link to header here !!!!!
             //You add it like this in the data.json {"LinkToHeader":"This is gonna be the first link", "header":"Long term tickets", "id":"5"},
-            return <TouchableHighlight underlayColor="white" onPress={() => {this.GotoItemByHeader(item.header)}}><Text style={{fontSize:16,fontWeight:'300',color:color_scheme.color_blue_4,textDecorationLine:'underline',paddingVertical:5}}>{item.LinkToHeader}</Text></TouchableHighlight>
+            return <TouchableHighlight underlayColor="white" onPress={() => {this.GotoItemByHeader(item.header)}}>
+              <Text style={styles.touchHighlight} >{item.LinkToHeader}</Text>
+              </TouchableHighlight>
           }
           //console.log(item);
         }}
@@ -110,7 +112,7 @@ const styles = StyleSheet.create({
     marginVertical:10,
     paddingHorizontal:22.5,
     paddingVertical:15,
-    marginBottom:30,
+    marginBottom:16,
     //borderWidth:0.5,
     
     borderStyle:'solid',
@@ -141,7 +143,13 @@ const styles = StyleSheet.create({
   },
 
   text_view:{
-    marginBottom:20,   
+    marginBottom:4,   
+  },
+
+  touchHighlight:{
+    fontSize: font_styles.guide_text_size,
+    fontWeight: font_styles.guide_text_weight,
+    color: color_scheme.color_blue_0,
   }
 
 });
