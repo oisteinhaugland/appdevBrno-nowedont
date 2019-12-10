@@ -123,7 +123,7 @@
                 "Title":"Emergency Contacts",
                 "ContentArray":[
                     {
-                        "header":"Emerency contacts:",
+                        "header":"Emergency contacts:",
                         "body":[
                             {"Text":"\n\t112 – General Emergency", "id":"1"},
                             {"Text":"\t155 – Medical Emergency","id":"2"},
