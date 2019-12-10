@@ -21,7 +21,7 @@ const MainNavCard = ({Title, Description, Color, Navigate,iconName,iconColor="#3
     onPress uses the function passed down from homeScreenComponent, the rest are styles
     also needs a little bit of working on the styles since it highlights the whole section not just the card*/
     return (
-        <TouchableHighlight underlayColor="white" activeOpacity={0.5} onPress={()=>{Navigate(GuideID)}}>
+        <TouchableHighlight underlayColor="white" activeOpacity={0.5} onPress={()=>{Navigate(GuideID, Title)}}>
             <View style={NavColor(Color)}>
                 
                 <View style={styles.flex_spacing}>

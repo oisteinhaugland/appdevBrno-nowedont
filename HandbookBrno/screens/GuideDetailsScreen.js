@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import {View, ScrollView, Text, FlatList, StyleSheet, Image, Linking, TouchableHighlight} from 'react-native';
+import {View, ScrollView, Text, FlatList, StyleSheet, Image, Linking, TouchableHighlight, Button} from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 import * as data from '../data/data.json';
 
@@ -10,7 +11,8 @@ import {font_styles,color_scheme} from '../assets/general_styles/general_style.j
 export default class GuideDetailsScreen extends Component {
   static navigationOptions = ({ navigation }) => {
     return {
-      title: navigation.getParam('Title', ''),
+      title: navigation.getParam('HeaderTitle', ''),
+      //headerRight: () =>{ return <TouchableHighlight onPress={() => {}} underlayColor="white"><Ionicons name="md-arrow-up" size={25} style={{marginHorizontal:20}} /></TouchableHighlight>}
     };
   };
   
@@ -22,13 +24,9 @@ export default class GuideDetailsScreen extends Component {
 
    // console.log(data["guides"][this.props.navigation.getParam('ID', 'NO-ID')]);
   }
-  componentWillMount(){
-    
-    this.props.navigation.setParams({
-      Title: this.state.GuideData.Title
-    });
-
-  }
+  componentDidMount(){
+    this.props.navigation.setParams({headerRight: () => { return <TouchableHighlight onPress={() => {this.GoToStart()}} underlayColor="white"><Ionicons name="md-arrow-up" size={25} style={{marginHorizontal:20}} /></TouchableHighlight>}})
+    }
 
   renderParagraph = ({header, body}) =>{
     
@@ -53,7 +51,7 @@ export default class GuideDetailsScreen extends Component {
           }
           if(item.LinkText !=null){
             //LINK styles here
-            return <Text style={{color: 'blue'}}
+            return <Text style={{textDecorationLine:'underline',fontSize: font_styles.guide_text_size,color: color_scheme.color_blue_4}}
                     onPress={() => Linking.openURL(item.Link)}>
                     {item.LinkText}
                    </Text>
@@ -61,7 +59,7 @@ export default class GuideDetailsScreen extends Component {
           if(item.LinkToHeader !=null){
             //Style the Link to header here !!!!!
             //You add it like this in the data.json {"LinkToHeader":"This is gonna be the first link", "header":"Long term tickets", "id":"5"},
-            return <TouchableHighlight underlayColor="white" onPress={() => {this.GotoItemByHeader(item.header)}}><Text>{item.LinkToHeader}</Text></TouchableHighlight>
+            return <TouchableHighlight underlayColor="white" onPress={() => {this.GotoItemByHeader(item.header)}}><Text style={{fontSize:16,fontWeight:'300',color:color_scheme.color_blue_4,textDecorationLine:'underline',paddingVertical:5}}>{item.LinkToHeader}</Text></TouchableHighlight>
           }
           //console.log(item);
         }}
@@ -81,6 +79,9 @@ export default class GuideDetailsScreen extends Component {
     //this.flatListRef.scrollToIndex({animated: true, index:1});
     this.flatListRef.scrollToItem({animated: true, item:theItemWeNeed});
 
+  }
+  GoToStart = () =>{
+    this.flatListRef.scrollToIndex({animated: true, index:0})
   }
   render() {
     return (

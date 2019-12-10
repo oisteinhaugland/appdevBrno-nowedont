@@ -16,11 +16,13 @@ export default class CheckBoxListScreen extends Component {
         },
     }
     /*We specify the guideID to know which object from data.json load to the guidedetails under specific checkboxcard */
-    NavigateToGuide = (guideID) =>{
-        this.props.navigation.navigate('GuideDetails', { ID : guideID});
+    NavigateToGuide = (guideID, HeaderTitle) =>{
+        if(guideID == "" || guideID == null){
+          guideID = "404";
+        }
+        this.props.navigation.navigate('GuideDetails', { ID : guideID, HeaderTitle:HeaderTitle});
     }
     componentDidMount(){
-
     }
     _storeData = async (itemName, itemValue) => {
         try {
@@ -43,9 +45,9 @@ export default class CheckBoxListScreen extends Component {
     RenderCheckBoxCards(){
         const { params} = this.props.navigation.state;
         let CheckBoxCards = [
-            <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="LearningAgreement" Title="Learning Agreement" Description="Get learning agreement signed at your faculty"  
+            <CheckBoxCard Navigate={this.NavigateToGuide} Title="Learning Agreement" Description="Get learning agreement signed at your faculty"  
             identifier="Learning" setIconColour={params.setIconColour} setIconName={params.setIconName}/>,
-            <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" 
+            <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" 
             Title="Accomodation office" Description="Get documents signed" identifier="WasteFee" setIconColour={params.setIconColour} setIconName={params.setIconName}/>,
             <CheckBoxCard Navigate={this.NavigateToGuide} 
             GuideID="TramCard" 
@@ -56,10 +58,8 @@ export default class CheckBoxListScreen extends Component {
             />,
             <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="WasteFee" Title="Waste Tax" 
             Description="Pay Waste tax before deadline" identifier="WasteTax" setIconColour={params.setIconColour} setIconName={params.setIconName}/>,
-            <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Czech Bank-account" 
-            Description="Open czech account to receive scholarship (Free money)" identifier="bank" setIconColour={params.setIconColour} setIconName={params.setIconName}/>,
-            <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="404" Title="Get crack" identifier="GetCrack" setIconColour={params.setIconColour} setIconName={params.setIconName}/>
-
+            <CheckBoxCard Navigate={this.NavigateToGuide} GuideID="" Title="Czech Bank-account" 
+            Description="Open czech account to receive scholarship (Free money)" identifier="bank" setIconColour={params.setIconColour} setIconName={params.setIconName}/>
         ]
         this._storeData("CheckboxCount", CheckBoxCards.length.toString());
 
