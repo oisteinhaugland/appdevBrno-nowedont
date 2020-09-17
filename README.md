@@ -36,7 +36,6 @@ Our application is a survival guide for students in Brno, mainly targeted at inc
 Domantas Mikelionis - https://github.com/DomantasMk / https://www.linkedin.com/in/domantas-mikelionis-36aa84172/  
 Øistein Haugland - https://github.com/oisteinhaugland / https://www.linkedin.com/in/oisteinhaugland/
 
-# appdevBrno-nowedont
 
 ## Usefull links:
 Trello-board: https://trello.com/b/1SN1RyKd/no-board
