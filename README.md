@@ -2,7 +2,7 @@
 
 Our application is a survival guide for students in Brno, mainly targeted at incoming foreign students to collect and present all the necessary information a new student would need to thrive. There is a lot of information the first few weeks and a lot of things to remember. Our application would solve the problem of information overload and different information sources, gathering it in one application, available offline after the initial download. It contains a to-do list with the essentials and guides for getting tram cards and other important procedures. ALso the application was aimed to be scalable in sense of information and easily updatable.
 
-# howcase
+# Showcase
 ![](ios_Screencast.gif)
 ![](android_Screencast.gif)
 
